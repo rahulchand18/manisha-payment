@@ -9,5 +9,13 @@
 <body>
     {{>navbar}}
     <h1>Login</h1>
+    <form action="/login" method="POST"></form>
+    <label for="Email">Email</label>
+    <input type="email" name='email'>
+
+    <label for="password">Password</label>
+    <input type="passsword" name='password'>
+
+    <button type="submit">Login</button>
 </body>
 </html>
