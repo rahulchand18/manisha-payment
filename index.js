@@ -2,6 +2,8 @@ const express = require('express');
 const path = require('path');
 const hbs = require('hbs');
 const bcrypt = require("bcryptjs");
+const cron = require('node-cron');
+// const userJson = require('../Users.json')
 
 const alert = require("alert");
 
@@ -9,7 +11,12 @@ const salt = bcrypt.genSaltSync(10);
 
 const app = express();
 require('./db/conn');
-const Register = require('./models/register')
+const User = require('./models/user')
+const Userverification = require('./models/verifiedUser')
+
+const nodemailer = require('nodemailer')
+
+// const {v4: uuidv4} = require('uuid')
 
 const static_path = path.join(__dirname, '../public')
 const template = path.join(__dirname, './templates/views')
@@ -25,7 +32,7 @@ app.use(express.urlencoded({ extended: false }))
 app.get('/', (req, res) => {
     res.render('index')
 });
-app.get('/inhome', (req, res) => {
+app.get('/profile', (req, res) => {
     res.render('loggedin')
 });
 app.get('/register', (req, res) => {
@@ -44,19 +51,19 @@ app.post('/register', async (req, res) => {
         const cpassword = req.body.conpassword;
         const email = req.body.email;
 
-        const user = await Register.findOne({ email: email })
+        const user = await User.findOne({ email: email })
         if (user != null) {
             alert("User already Registered");
         }
         try {
 
-
+        
 
             if (password === cpassword) {
 
 
                 const hash = bcrypt.hashSync(password, salt);
-                const registerUser = new Register({
+                const registerUser = new User({
                     firstName: req.body.firstName,
                     lastName: req.body.lastName,
                     email: req.body.email,
@@ -88,7 +95,7 @@ app.post('/login', async (req, res) => {
         const password = req.body.password;
         // console.log(password);
         // console.log(email)
-        const user = await Register.findOne({ email: email })
+        const user = await User.findOne({ email: email })
         if (user == null) {
            alert("User not registered yet!!");
         }
@@ -97,7 +104,13 @@ app.post('/login', async (req, res) => {
 
         if (bcrypt.compareSync(password, user.password)) {
             console.log("success")
-            res.status(201).render('loggedin')
+            res.status(201).render('loggedin',{
+                fullName: user.firstName +" "+ user.lastName,
+                firstName: user.firstName,
+                email: user.email,
+                pno: user.phone
+
+            })
         }
         else {
             // res.send('Invalid Credentials')
@@ -114,6 +127,22 @@ app.post('/login', async (req, res) => {
 app.get('/logout', (req, res) => {
     res.render('login');
 })
+
+//Cron Task
+
+// cron.schedule('* * * * * *',()=>{
+//     console.log("Running cron")
+//     db.User.insertMany(userJson,(err)=>{
+//         if(err){
+//             console.log(err);
+//         }
+//         else{
+//             console.log("Success");
+//         }
+//     })
+// })
+
+
 
 app.listen(3000, () => {
     console.log("Server started at port 3000");

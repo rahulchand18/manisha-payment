@@ -11,10 +11,10 @@
 </head>
 <body>
   
-  <div class="topnav">
-    <a  href="/">Home</a>
-    <a href="/login">Login</a>
-  <a href="/register">Register</a>
+  <div class="topnav" id="top">
+    <a class="btn"  href="/">Home</a>
+    <a class="btn" href="/login">Login</a>
+  <a class="btn" href="/register">Register</a>
   
   {{!-- <div class="topnav-right">
    <a href="Welcome" >Welcome to the login page  </a>  
@@ -60,4 +60,20 @@
 
   
 </body>
+
+<script>
+  var btnContainer = document.getElementById("top");
+
+// Get all buttons with class="btn" inside the container
+var btns = btnContainer.getElementsByClassName("btn");
+
+// Loop through the buttons and add the active class to the current/clicked button
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
 </html>
