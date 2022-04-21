@@ -5,6 +5,9 @@ const bcrypt = require("bcryptjs");
 const cron = require('node-cron');
 // const userJson = require('../Users.json')
 
+
+const session = require("express-session");
+
 const alert = require("alert");
 
 const salt = bcrypt.genSaltSync(10);
@@ -13,12 +16,13 @@ const app = express();
 require('./db/conn');
 const User = require('./models/user')
 const Userverification = require('./models/verifiedUser')
+const userInfo = require('./models/userInfo')
 
 const nodemailer = require('nodemailer')
 
 // const {v4: uuidv4} = require('uuid')
 
-const static_path = path.join(__dirname, '../public')
+const static_path = path.join(__dirname, './templates/static')
 const template = path.join(__dirname, './templates/views')
 const partials_path = path.join(__dirname, './templates/partials')
 app.use(express.static(static_path));
@@ -28,12 +32,20 @@ hbs.registerPartials(partials_path)
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }))
+app.use(session({
+    secret:"secret",
+    resave: false,
+    saveUninitialized: true
+}))
 
 app.get('/', (req, res) => {
     res.render('index')
 });
-app.get('/profile', (req, res) => {
-    res.render('loggedin')
+app.get('/loggedin', (req, res) => {
+    if(req.session.user){
+
+        res.render('loggedin',{user:req.session.user});
+    }
 });
 app.get('/register', (req, res) => {
     res.render('register')
@@ -104,13 +116,16 @@ app.post('/login', async (req, res) => {
 
         if (bcrypt.compareSync(password, user.password)) {
             console.log("success")
-            res.status(201).render('loggedin',{
-                fullName: user.firstName +" "+ user.lastName,
-                firstName: user.firstName,
-                email: user.email,
-                pno: user.phone
+            req.session.user= user;
+            res.redirect('/loggedin');
 
-            })
+            // res.status(201).render('loggedin',{
+            //     fullName: user.firstName +" "+ user.lastName,
+            //     firstName: user.firstName,
+            //     email: user.email,
+            //     pno: user.phone
+
+            // })
         }
         else {
             // res.send('Invalid Credentials')

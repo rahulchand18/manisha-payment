@@ -5,14 +5,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/style.css">
     <title>Loggedin</title>
 </head>
 <body>
     {{>innavbar}}
-<h1>Hello, {{fullName}}</h1>
-<h2>Name: {{fullName}} </h2>
-<h2>Email Address: {{email}}</h2>
-<h2>Phone number: {{pno}}</h2>
+    <div class="container">
+        <div>
+            
+{{!-- {{locals.user? email=user.email:"sorry"}} --}}
+<h3>Name: {{user.firstName }} {{user.lastName}}</h3>
+<h3>Email Address: {{user.email}}</h3>
+<h3>Phone number: {{user.phone}}</h3>
+    <button type="submit" class="btn btn-primary btn-lg"
+              style="padding-left: 2.5rem; padding-right: 2.5rem; ">Edit Profile</button>
     
+        </div>
+        <div>
+            <img id="profile" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__340.png" alt="">
+        {{!-- <input type="file" name="image" > --}}
+        </div>
+    
+<h1>Hello, {{user.firstName}}</h1>
+    
+    </div>
+
+<style>
+    
+}
+</style>
 </body>
 </html>

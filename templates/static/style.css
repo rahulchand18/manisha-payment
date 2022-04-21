@@ -1,0 +1,15 @@
+.container{
+    display: flex;
+    justify-content:space-between;
+    flex-direction: column-reverse;
+    padding: 30px;
+    align-items: center;
+    border-radius: 20px;
+    width: auto;
+    background-image: linear-gradient(aqua,rgb(132, 132, 230))
+    
+}
+.container img{
+    height: 200px;
+
+    border-radius: 30px;
