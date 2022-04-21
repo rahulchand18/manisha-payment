@@ -3,22 +3,17 @@ const path = require('path');
 const hbs = require('hbs');
 const bcrypt = require("bcryptjs");
 const cron = require('node-cron');
-// const userJson = require('../Users.json')
-
-
 const session = require("express-session");
-
-const alert = require("alert");
 
 const salt = bcrypt.genSaltSync(10);
 
 const app = express();
 require('./db/conn');
 const User = require('./models/user')
-const Userverification = require('./models/verifiedUser')
+// const Userverification = require('./models/verifiedUser')
 const userInfo = require('./models/userInfo')
 
-const nodemailer = require('nodemailer')
+// const nodemailer = require('nodemailer')
 
 // const {v4: uuidv4} = require('uuid')
 
@@ -46,6 +41,9 @@ app.get('/loggedin', (req, res) => {
 
         res.render('loggedin',{user:req.session.user});
     }
+    else{
+        res.render('login',{message:"You must login first!!"})
+    }
 });
 app.get('/register', (req, res) => {
     res.render('register')
@@ -56,6 +54,21 @@ app.get('/login', (req, res) => {
     res.render('login')
 });
 
+app.get('/loggedin/edit',(req,res)=>{
+    res.render('editProfile',{user:req.session.user});
+})
+app.get('/logout', (req, res) => {
+    req.session.destroy((err)=>{
+        if(err){
+            console.log(err);
+        }else{
+
+            res.render('login',{messageSuccess:"User Logged out successfully!!"});
+        }
+    })
+})
+
+//POST REQUESTS
 app.post('/register', async (req, res) => {
     try {
         // console.log(req.body.fullname)
@@ -65,8 +78,10 @@ app.post('/register', async (req, res) => {
 
         const user = await User.findOne({ email: email })
         if (user != null) {
-            alert("User already Registered");
+            // alert("User already Registered");
+            res.render('register',{message:" User already registered!!"});
         }
+    else{
         try {
 
         
@@ -86,18 +101,20 @@ app.post('/register', async (req, res) => {
 
                 const registered = await registerUser.save();
                 // alert('hello')
-                res.status(201).render('login')
+                res.status(201).render('login',{messageSuccess:"User Regstered Succesfully!!"})
 
             } else {
-                alert('Password not matched')
+                res.render('login',{invalid:"Invalid Password"});
             }
         } catch (error) {
             console.log(error)
 
         }
+    }
     } catch (error) {
         res.status(400).send(error)
     }
+
 });
 
 app.post('/login', async (req, res) => {
@@ -109,28 +126,21 @@ app.post('/login', async (req, res) => {
         // console.log(email)
         const user = await User.findOne({ email: email })
         if (user == null) {
-           alert("User not registered yet!!");
+        //    alert("User not registered yet!!");
+        res.render('login',{message:"User not registered!!"});
         }
-        // console.log(user.password)
-        // console.log( bcrypt.compareSync(password,user.password));
-
-        if (bcrypt.compareSync(password, user.password)) {
+        
+        else if (bcrypt.compareSync(password, user.password)) {
             console.log("success")
             req.session.user= user;
             res.redirect('/loggedin');
 
-            // res.status(201).render('loggedin',{
-            //     fullName: user.firstName +" "+ user.lastName,
-            //     firstName: user.firstName,
-            //     email: user.email,
-            //     pno: user.phone
-
-            // })
+           
         }
         else {
-            // res.send('Invalid Credentials')
-            alert('Invalid Credentials');
-            res.render('login');
+            
+            res.render('login',{message:"Invalid Credientials!!"});
+            // res.render('login');
             
         }
 
@@ -139,8 +149,9 @@ app.post('/login', async (req, res) => {
     }
 
 })
-app.get('/logout', (req, res) => {
-    res.render('login');
+app.post('/loggedin/edit/save',(req,res)=>{
+    console.log(" Changes Saved");
+    res.end();
 })
 
 //Cron Task

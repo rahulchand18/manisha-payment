@@ -1,25 +1,18 @@
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../static/style.css">
-    <title>Loggedin</title>
-</head>
-<body>
+{{>header}}
     {{>innavbar}}
     <div class="container">
         <div>
             
 {{!-- {{locals.user? email=user.email:"sorry"}} --}}
-<h3>Name: {{user.firstName }} {{user.lastName}}</h3>
-<h3>Email Address: {{user.email}}</h3>
-<h3>Phone number: {{user.phone}}</h3>
+<h3><b>Name:</b> {{user.firstName }} {{user.lastName}}</h3>
+<h3><b>Email Address: </b>{{user.email}}</h3>
+<h3><b>Phone number: </b>{{user.phone}}</h3>
+<form action="/loggedin/edit" method="get">
     <button type="submit" class="btn btn-primary btn-lg"
               style="padding-left: 2.5rem; padding-right: 2.5rem; ">Edit Profile</button>
     
+</form>
         </div>
         <div>
             <img id="profile" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__340.png" alt="">
@@ -31,8 +24,22 @@
     </div>
 
 <style>
+   .container{
+    display: flex;
+    justify-content:space-between;
+    flex-direction: column-reverse;
+    padding: 30px;
+    align-items: center;
+    border-radius: 20px;
+    width: auto;
+    background-image: linear-gradient(aqua,rgb(132, 132, 230))
     
 }
+.container img{
+    height: 200px;
+
+    border-radius: 30px;
+}
+
 </style>
-</body>
-</html>
+{{>footer}}

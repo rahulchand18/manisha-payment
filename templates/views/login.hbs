@@ -9,9 +9,10 @@
 </head>
 <body>
     {{>navbar}}
-   
+   <div class=" alter alert-success text-center">{{messageSuccess}}</div>
       <div class="container">
     <h1>Login</h1>
+    
         <form action='/login' method='POST'>
 
           <!-- Email input -->
@@ -44,6 +45,8 @@
             
             
           </div>
+          <div class=" alter alert-danger text-center">{{message}}</div>
+          
 
           <div class="text-center text-lg-start mt-4 pt-2">
             <button type="submit" class="btn btn-primary btn-lg"
@@ -64,12 +67,17 @@
             display: flex;
             justify-content:space-between;
           }
+           .alter{
+        margin: 10px;
+}
             
         </style>
       </div>
       </div>
     </div>
   </div>
+  
+    
   
     
 </section>
