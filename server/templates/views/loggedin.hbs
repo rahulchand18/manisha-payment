@@ -1,0 +1,53 @@
+{{>header}}
+    {{>innavbar}}
+    <div class="container">
+        <div>
+            
+{{!-- {{locals.user? email=user.email:"sorry"}} --}}
+<p id="about">
+
+{{user.about}}
+</p>
+<h3><b>Name:</b> {{user.firstName }} {{user.lastName}}</h3>
+<h3><b>Email Address: </b>{{user.email}}</h3>
+<h3><b>Phone number: </b>{{user.phone}}</h3>
+<form action="/loggedin/edit" method="get">
+    <button type="submit" class="btn btn-primary btn-lg"
+              style="padding-left: 2.5rem; padding-right: 2.5rem; ">Edit Profile</button>
+    
+</form>
+        </div> 
+        <div>
+            <img id="profile" src="image-1651195489369.jpeg" alt="">
+        {{!-- <input type="file" name="image" > --}}
+        </div>
+    
+<h1>Hello, {{user.firstName}}</h1>
+    
+    </div>
+
+<style>
+   .container{
+    display: flex;
+    justify-content:space-between;
+    flex-direction: column-reverse;
+    padding: 30px;
+    align-items: center;
+    border-radius: 20px;
+    width: fit-content;
+    background-image: linear-gradient(aqua,rgb(132, 132, 230))
+    
+}
+.container img{
+    height: 200px;
+    width: 200px;
+    border: 2px solid black;
+    border-radius: 30px;
+}
+p{
+    
+    width: 500px;
+}
+
+</style>
+{{>footer}}
