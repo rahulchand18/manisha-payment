@@ -12,37 +12,33 @@ import { LogoutComponent } from './user/logout/logout.component';
 
 const routes: Routes = [
   {
-    path:'',
-    component: HomeComponent
+    path: '',
+    component: HomeComponent,
   },
   {
-    path:'register',
-    component: RegisterComponent
+    path: 'register',
+    component: RegisterComponent,
   },
   {
-    path:'login',
-    component: LoginComponent
+    path: 'login',
+    component: LoginComponent,
   },
   {
-    path:'loggedin',
-    component: LoggedinComponent, 
-    
+    path: 'loggedin',
+    component: LoggedinComponent,
   },
   {
-    path:'edit',
-    component: EditComponent, 
-    
+    path: 'edit',
+    component: EditComponent,
   },
   {
-    path:'logout',
-    component:LogoutComponent
-  }
+    path: 'logout',
+    component: LogoutComponent,
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { 
-    
-}
+export class AppRoutingModule {}
