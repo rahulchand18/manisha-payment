@@ -1,11 +1,13 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
-mongoose.connect("mongodb://localhost:27017/Registration",{
+mongoose
+  .connect("mongodb://localhost:27019/Registration", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
-    // useCreateIndex: true
-}).then(()=>{
+  })
+  .then(() => {
     console.log("Connection Successful");
-}).catch((e)=>{
-    console.log(e)
-})
+  })
+  .catch((e) => {
+    console.log(e);
+  });
