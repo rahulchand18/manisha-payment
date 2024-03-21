@@ -1,0 +1,12 @@
+version: '3'
+services:
+  ams-front:
+    container_name: ams-front
+    build: .
+    environment:
+      NODE_ENV: production
+    ports:
+      - 4300:80
+    volumes:
+      - ./:/usr/local/app/frontend
+    command: nginx -g "daemon off;"

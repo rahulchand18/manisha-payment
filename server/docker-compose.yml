@@ -1,0 +1,37 @@
+version: '3.8'
+services:
+    ipl-api:
+        container_name: ipl-api
+        build: .
+        environment:
+            - MONGO_HOST=hrm-db
+            - COMPOSE_PROJECT_NAME=hrm
+        ports:
+            - 3000
+        
+        depends_on:
+            - hrm-db
+        networks:
+            - hrm_network
+        restart: unless-stopped
+        links:
+            - hrm-db
+        command: npm start
+
+    hrm-db:
+        container_name: hrm-db
+        image: mongo:6
+        volumes:
+            - ../psvolumes/hrm-db:/data/db
+        environment:
+            - COMPOSE_PROJECT_NAME=hrm
+            - MONGO_INITDB_ROOT_USERNAME=
+            - MONGO_INITDB_ROOT_PASSWORD=
+        ports:
+            - 27019:27017
+        networks:
+            - hrm_network
+        restart: unless-stopped
+networks:
+    hrm_network:
+        driver: bridge
