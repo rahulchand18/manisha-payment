@@ -86,6 +86,10 @@ export class AuthService {
     return this.http.post<any>(URL_CONSTANT.loginUrl, user);
   }
 
+  register(user: any): Observable<any> {
+    return this.http.post<any>(URL_CONSTANT.registerUrl, user);
+  }
+
   get logOutStatus(): Observable<void> {
     return this.logOutSubject.asObservable();
   }

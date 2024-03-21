@@ -7,6 +7,7 @@ const VerifiedUser = require("../models/verifiedUser");
 
 const { v4: uuidv4 } = require("uuid");
 const AuthService = require("../services/auth-service");
+const { createAccessToken } = require("../utils/utils");
 // const User = require("../models/user");
 
 let transporter = nodemailer.createTransport({
@@ -109,18 +110,17 @@ const loginPostController = async (req, res) => {
       console.log("User not registered");
 
       // res.render("login", { message: "User not registered!!" });
-      res.send({ message: "User Not Registered", validUser: false });
+      res
+        .status(422)
+        .send({ message: "User Not Registered", validUser: false });
     } else if (bcrypt.compareSync(password, user.password)) {
       req.session.user = user;
       console.log("Hello" + req.session.user);
-      const refreshToken = await AuthService.createRefreshToken(
-        req,
-        employee._id
-      );
+      const refreshToken = await AuthService.createRefreshToken(req, user._id);
       AuthService.setCookie("refresh-token", refreshToken, res);
       const payload = {
-        userName: employee.userName,
-        id: employee._id,
+        userName: user.email,
+        id: user._id,
       };
       res.send({
         user: req.session.user,
@@ -130,7 +130,7 @@ const loginPostController = async (req, res) => {
       // res.redirect("/loggedin");
     } else {
       // res.render("login", { message: "Invalid Credientials!!" });
-      res.json({
+      res.status(422).json({
         message: "Invalid Credentials",
         validUser: false,
       });
@@ -165,26 +165,25 @@ registerGetController = (req, res) => {
 registerPostController = async (req, res) => {
   try {
     const password = req.body.password;
-    const cpassword = req.body.conpassword;
+    const cpassword = req.body.confirmPassword;
     const email = req.body.email;
 
     const user = await User.findOne({ email: email });
     if (user != null) {
       // alert("New RequestUser already Registered");
       // res.render("register", { message: " User already registered!!" });
-      res.json({
+      res.status(405).json({
         message: "User Already Registered",
       });
-      console.log("register-post");
     } else {
       try {
         if (password === cpassword) {
           const hash = bcrypt.hashSync(password, salt);
           const registerUser = new User({
-            firstName: req.body.firstName,
-            lastName: req.body.lastName,
-            email: req.body.email,
-            phone: req.body.phone,
+            firstName: req.body?.firstName,
+            lastName: req.body?.lastName,
+            email: req.body?.email,
+            phone: req.body?.phone,
             password: hash,
             address: {
               street: "",
@@ -195,15 +194,13 @@ registerPostController = async (req, res) => {
           });
 
           const registered = await registerUser.save();
-          // alert('hello')
-          console.log(registered);
-          // res.status(201).render("login", {
-          //   messageSuccess: "User Regstered Succesfully!!",
-          // });
-          // res.status(201).send(registered)
-          sendEmail(registered, res);
+          if (registered) {
+            res.status(201).send({ message: "User Registered Successfully!!" });
+          } else {
+            res.status(405).send({ message: "Error" });
+          }
         } else {
-          res.status.send({
+          res.status(405).send({
             status: "Bad Request",
             message: "Passwords do not match",
           });
@@ -275,7 +272,6 @@ logoutController = (req, res) => {
 loggedinController = async (req, res) => {
   if (req.session.user) {
     req.session.user = await User.findOne({ email: req.session.user.email });
-    console.log(req.session.user);
     // res.render("loggedin", { user: req.session.user });
     res.send({ user: req.session.user, isLoggedIn: true });
   } else {

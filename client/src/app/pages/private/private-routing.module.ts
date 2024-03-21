@@ -21,6 +21,12 @@ const routes: Routes = [
       },
     ],
   },
+  {
+    path: 'tournament',
+    loadChildren: async () =>
+      (await import('./dashboard/tournament/tournament.module'))
+        .TournamentModule,
+  },
 ];
 
 @NgModule({

@@ -1,0 +1,48 @@
+<div class="container p-3">
+    <h4>Matches</h4>
+    @if(allSeries && allSeries.length){
+
+    <div class="border p-3 d-flex match-container">
+        <div class="card p-2 cursor-pointer" *ngFor="let match of allSeries"
+            (click)="goToPrediction(match.id, match.active)">
+            @if(!match.active){
+            <div class="alert alert-danger" role="alert">
+                Match Prediction is locked!!
+            </div>
+            }@else{
+            <div class="alert alert-info" role="alert">
+                Match is active!!
+            </div>
+
+            }
+            <div class="d-flex justify-content-between">
+                <div class="w-10 m-2 ">
+                    <div class="team1 m-2">
+                        <img class="circle" height="30px" [src]="match.t1img" alt="" />
+                        <span>{{ match.t1 }}</span>
+                    </div>
+                    <div class="team1 m-2">
+                        <img class="circle" height="30px" [src]="match.t2img" alt="" />
+                        <span>{{ match.t2 }}</span>
+                    </div>
+                </div>
+                <div class="w-10">
+                    {{ match.date | date : "dd MMMM, yyyy" }}
+                </div>
+            </div>
+            <div class="m-auto">
+                {{ match.status }}
+            </div>
+        </div>
+    </div>
+    }
+    @else {
+    <div class="alert alert-danger" role="alert">
+        No Active Matches available
+    </div>
+    }
+</div>
+
+<div class="container">
+    <router-outlet></router-outlet>
+</div>

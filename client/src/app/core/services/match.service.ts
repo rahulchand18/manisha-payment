@@ -1,0 +1,81 @@
+import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { URL_CONSTANT } from '../constants';
+import { HttpService } from './http.service';
+
+@Injectable({
+  providedIn: 'root',
+})
+export class MatchService {
+  constructor(private http: HttpService) {}
+
+  getAllSeries(query?: { history: boolean }): Observable<any> {
+    return this.http.get('/getAllSeries', query);
+  }
+
+  getAllTournaments(type: string, email: string): Observable<any> {
+    return this.http.get(`/getAllTournaments/${type}/${email}`);
+  }
+
+  createTournament(data: any): Observable<any> {
+    return this.http.post(`/createNewTournament`, { tournament: data });
+  }
+
+  joinTournament(
+    tournamentId: string,
+    data: { email: string; name: string }
+  ): Observable<any> {
+    return this.http.post(`/joinTournament/${tournamentId}`, data);
+  }
+
+  getTournamentByTournamentId(tournamentId: string): Observable<any> {
+    return this.http.get(`/getTournamentByTournamentId/${tournamentId}`);
+  }
+
+  getAllTeamInfo(): Observable<any> {
+    return this.http.get(`/getAllTeamInfo`);
+  }
+
+  updateRequest(
+    tournamentId: string,
+    requestId: string,
+    accept: boolean
+  ): Observable<any> {
+    return this.http.put(
+      `/updateRequest/${tournamentId}/${requestId}/${accept}`
+    );
+  }
+  createMatch(match: any): Observable<any> {
+    return this.http.post(`/createMatch`, { match });
+  }
+  updateMatch(id: string, match: any): Observable<any> {
+    return this.http.put(`/updateMatch/${id}`, { updatedData: match });
+  }
+  updateActiveStatus(id: string, active: boolean): Observable<any> {
+    return this.http.put(`/updateActiveStatus/${id}`, { active });
+  }
+  updateCompleteStatus(id: string, history: boolean): Observable<any> {
+    return this.http.put(`/updateCompleteStatus/${id}`, { history });
+  }
+  getPrediction(matchId: string, email: string): Observable<any> {
+    return this.http.get(`/getPrediction/${matchId}/${email}`);
+  }
+  getPlayers(matchId: string): Observable<any> {
+    return this.http.get(`/getPlayers/${matchId}`);
+  }
+  updatePrediction(body: any): Observable<any> {
+    return this.http.put(`/updatePrediction/`, body);
+  }
+  createPrediction(body: any): Observable<any> {
+    return this.http.post(`/createPrediction/`, body);
+  }
+  calculate(matchId: string): Observable<any> {
+    return this.http.put(`/calculate/${matchId}`);
+  }
+  getPointsTable(matchId: string): Observable<any> {
+    return this.http.get(`/getPointsTable/${matchId}`);
+  }
+  getAllPredictions(matchId: string): Observable<any> {
+    return this.http.get(`/getAllPredictions/${matchId}`);
+  }
+}

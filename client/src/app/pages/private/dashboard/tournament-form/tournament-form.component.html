@@ -1,0 +1,29 @@
+<form [formGroup]="tournamentForm" (ngSubmit)="submitForm(tournamentForm)">
+  <h3 matDialogTitle class="card-title">Create Tournament</h3>
+  <mat-dialog-content>
+    <div class="card">
+      <div class="card-body">
+        <div class="form-row d-flex justify-content-between">
+          <div class="form-col w-50 m-1">
+            <mat-form-field class="w-100" appearance="outline">
+              <mat-label>Tournament Name</mat-label>
+              <input type="text" formControlName="name" matInput />
+            </mat-form-field>
+          </div>
+          <div class="form-col w-50 m-1">
+            <mat-form-field class="w-100" appearance="outline">
+              <mat-label>Tournament ID</mat-label>
+              <input type="text" formControlName="tournamentId" matInput />
+            </mat-form-field>
+          </div>
+        </div>
+      </div>
+    </div>
+  </mat-dialog-content>
+  <mat-dialog-actions>
+    <button mat-flat-button color="primary" type="submit">Save</button>
+    <button mat-flat-button color="warn" type="button" mat-dialog-close>
+      Close
+    </button>
+  </mat-dialog-actions>
+</form>

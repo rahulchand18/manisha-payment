@@ -26,11 +26,9 @@ export class GuestGuard {
     if (this.authService.isLoggedIn !== true) {
       return true;
     }
-    if (this.authService.getUserData().userType === 'general') {
-      this.router.navigate(['']);
-    } else {
-      this.router.navigate(['']);
-    }
+
+    this.router.navigate(['/u']);
+
     return false;
   }
 }

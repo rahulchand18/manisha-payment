@@ -1,0 +1,2222 @@
+[
+    {
+        "teamName": "Lucknow Super Giants",
+        "shortname": "LSG",
+        "img": "https://g.cricapi.com/iapi/215-637876059669009476.png?w=48",
+        "players": [
+            {
+                "id": "151d6979-05d3-4c1f-ae30-0e58af0e8613",
+                "name": "Ayush Badoni",
+                "role": "Batting Allrounder",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm offbreak",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/icon512.png"
+            },
+            {
+                "id": "4e4958a9-f5be-44e6-ad3b-0f547aaeb060",
+                "name": "Mohsin Khan",
+                "role": "Batsman",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm offbreak",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/icon512.png"
+            },
+            {
+                "id": "9a71201c-c377-45aa-a355-1af6d2c4bae3",
+                "name": "Ravi Bishnoi",
+                "role": "Bowler",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm legbreak",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/players/9a71201c-c377-45aa-a355-1af6d2c4bae3.jpg"
+            },
+            {
+                "id": "a787dea1-e26b-47da-93eb-282ca027d969",
+                "name": "Krishnappa Gowtham",
+                "role": "Bowling Allrounder",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm offbreak",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/players/a787dea1-e26b-47da-93eb-282ca027d969.jpg"
+            },
+            {
+                "id": "895602b4-0219-4288-b6c5-49feb7bec846",
+                "name": "Amit Mishra",
+                "role": "Bowler",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm legbreak",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/players/895602b4-0219-4288-b6c5-49feb7bec846.jpg"
+            },
+            {
+                "id": "09ca2fcc-1a5a-4f35-80f4-4ef9bc2b2f64",
+                "name": "Arshad Khan",
+                "role": "Bowler",
+                "battingStyle": "Left Handed Bat",
+                "bowlingStyle": "Left-arm medium",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/icon512.png"
+            },
+            {
+                "id": "63075eff-1f66-4bf7-923f-5f92ee123283",
+                "name": "Manimaran Siddharth",
+                "role": "Bowler",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Left-arm orthodox",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/icon512.png"
+            },
+            {
+                "id": "7ee6e644-86fd-4a5b-b332-66a29b34283d",
+                "name": "Ashton Turner",
+                "role": "Batting Allrounder",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm offbreak",
+                "country": "Australia",
+                "playerImg": "https://h.cricapi.com/img/players/7ee6e644-86fd-4a5b-b332-66a29b34283d.jpg"
+            },
+            {
+                "id": "0a4bb087-ec55-4131-89a1-70f14153dbd9",
+                "name": "Mohsin Khan",
+                "role": "Bowler",
+                "battingStyle": "Left Handed Bat",
+                "bowlingStyle": "Left-arm fast-medium",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/icon512.png"
+            },
+            {
+                "id": "54e5a9b9-9b8d-460c-bf6e-8488f0e229f8",
+                "name": "David Willey",
+                "role": "Bowling Allrounder",
+                "battingStyle": "Left Handed Bat",
+                "bowlingStyle": "Left-arm fast-medium",
+                "country": "England",
+                "playerImg": "https://h.cricapi.com/img/players/54e5a9b9-9b8d-460c-bf6e-8488f0e229f8.jpg"
+            },
+            {
+                "id": "a034346c-b408-4d29-a0f0-8b12430be28e",
+                "name": "KL Rahul",
+                "role": "WK-Batsman",
+                "battingStyle": "Right Handed Bat",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/players/a034346c-b408-4d29-a0f0-8b12430be28e.jpg"
+            },
+            {
+                "id": "eaea0d44-195d-49c6-b76b-987e8d1af290",
+                "name": "Arshin Kulkarni",
+                "role": "Batting Allrounder",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm legbreak",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/icon512.png"
+            },
+            {
+                "id": "cae3f250-2552-404d-b3a1-a5515ab184e7",
+                "name": "Kyle Mayers",
+                "role": "Batting Allrounder",
+                "battingStyle": "Left Handed Bat",
+                "bowlingStyle": "Right-arm medium",
+                "country": "West Indies",
+                "playerImg": "https://h.cricapi.com/img/players/cae3f250-2552-404d-b3a1-a5515ab184e7.jpg"
+            },
+            {
+                "id": "f291cb07-d04b-4f71-b9a0-ad1043b76c84",
+                "name": "Yash Thakur",
+                "role": "Bowler",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm medium",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/icon512.png"
+            },
+            {
+                "id": "000f9f7c-cc24-4a85-8638-b013b0f4760e",
+                "name": "Quinton de Kock",
+                "role": "WK-Batsman",
+                "battingStyle": "Left Handed Bat",
+                "country": "South Africa",
+                "playerImg": "https://h.cricapi.com/img/players/000f9f7c-cc24-4a85-8638-b013b0f4760e.jpg"
+            },
+            {
+                "id": "f00ccdba-6137-4852-a490-ba782044b866",
+                "name": "Shivam Mavi",
+                "role": "Bowling Allrounder",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm fast-medium",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/players/f00ccdba-6137-4852-a490-ba782044b866.jpg"
+            },
+            {
+                "id": "95bbca5a-f097-43dc-9a47-bdb85f02fb1a",
+                "name": "Mayank Yadav",
+                "role": "Bowler",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm fast-medium",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/icon512.png"
+            },
+            {
+                "id": "74c6584a-45a5-4781-a5e7-c0c9340da954",
+                "name": "Devdutt Padikkal",
+                "role": "Batsman",
+                "battingStyle": "Left Handed Bat",
+                "bowlingStyle": "Right-arm offbreak",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/players/74c6584a-45a5-4781-a5e7-c0c9340da954.jpg"
+            },
+            {
+                "id": "4e8ab9cd-c5af-430e-887b-d22bf74ad052",
+                "name": "Nicholas Pooran",
+                "role": "WK-Batsman",
+                "battingStyle": "Left Handed Bat",
+                "bowlingStyle": "Right-arm offbreak",
+                "country": "West Indies",
+                "playerImg": "https://h.cricapi.com/img/players/4e8ab9cd-c5af-430e-887b-d22bf74ad052.jpg"
+            },
+            {
+                "id": "81c09c1b-1b1d-4e87-9eaa-d7d0a89a6159",
+                "name": "Krunal Pandya",
+                "role": "Batting Allrounder",
+                "battingStyle": "Left Handed Bat",
+                "bowlingStyle": "Left-arm orthodox",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/players/81c09c1b-1b1d-4e87-9eaa-d7d0a89a6159.jpg"
+            },
+            {
+                "id": "11340697-6443-4c3e-ab27-d9d30ba95671",
+                "name": "Marcus Stoinis",
+                "role": "Batting Allrounder",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm medium",
+                "country": "Australia",
+                "playerImg": "https://h.cricapi.com/img/players/11340697-6443-4c3e-ab27-d9d30ba95671.jpg"
+            },
+            {
+                "id": "2a90b6a9-ac87-49d2-947a-db688f5fcb4c",
+                "name": "Shamar Joseph",
+                "role": "Bowler",
+                "battingStyle": "Left Handed Bat",
+                "bowlingStyle": "Right-arm fast-medium",
+                "country": "West Indies",
+                "playerImg": "https://h.cricapi.com/img/icon512.png"
+            },
+            {
+                "id": "47109b0d-51f0-4a49-931e-e31bf77e69f5",
+                "name": "Deepak Hooda",
+                "role": "Batting Allrounder",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm offbreak",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/players/47109b0d-51f0-4a49-931e-e31bf77e69f5.jpg"
+            },
+            {
+                "id": "77ba09b0-773a-4008-bed1-e4fd642cffc5",
+                "name": "Naveen-ul-Haq",
+                "role": "Bowler",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm fast-medium",
+                "country": "Afghanistan",
+                "playerImg": "https://h.cricapi.com/img/players/77ba09b0-773a-4008-bed1-e4fd642cffc5.jpg"
+            },
+            {
+                "id": "2518d07c-55ea-416d-99d8-e847cba97ea2",
+                "name": "Yudhvir Singh Charak",
+                "role": "Bowler",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm fast-medium",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/icon512.png"
+            },
+            {
+                "id": "ee9ffd53-c57d-4808-8d29-f3798b221338",
+                "name": "Prerak Mankad",
+                "role": "Batsman",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm medium",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/players/ee9ffd53-c57d-4808-8d29-f3798b221338.jpg"
+            }
+        ]
+    },
+    {
+        "teamName": "Kolkata Knight Riders",
+        "shortname": "KKR",
+        "img": "https://g.cricapi.com/iapi/206-637852958714346149.png?w=48",
+        "players": [
+            {
+                "id": "aa0ceabf-d948-409b-9f17-13aff83e310d",
+                "name": "Srikar Bharat",
+                "role": "WK-Batsman",
+                "battingStyle": "Right Handed Bat",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/players/aa0ceabf-d948-409b-9f17-13aff83e310d.jpg"
+            },
+            {
+                "id": "306f6b88-0442-476a-be55-1500b3441051",
+                "name": "Manish Pandey",
+                "role": "Batsman",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm medium",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/players/306f6b88-0442-476a-be55-1500b3441051.jpg"
+            },
+            {
+                "id": "702254aa-2764-4fe4-b28e-20336a0ab069",
+                "name": "Varun Chakaravarthy",
+                "role": "Bowler",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm legbreak",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/players/702254aa-2764-4fe4-b28e-20336a0ab069.jpg"
+            },
+            {
+                "id": "effbb8f2-affa-4d18-93c5-285b243f88d0",
+                "name": "Andre Russell",
+                "role": "Bowling Allrounder",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm fast",
+                "country": "West Indies",
+                "playerImg": "https://h.cricapi.com/img/players/effbb8f2-affa-4d18-93c5-285b243f88d0.jpg"
+            },
+            {
+                "id": "225ae9ea-dba6-456d-a64b-2dbd7476c8f0",
+                "name": "Harshit Rana",
+                "role": "Bowler",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm fast-medium",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/icon512.png"
+            },
+            {
+                "id": "2a2c430b-c0dc-4154-a63f-32ffe8ef02fb",
+                "name": "Jason Roy",
+                "role": "Batsman",
+                "battingStyle": "Right Handed Bat",
+                "country": "England",
+                "playerImg": "https://h.cricapi.com/img/players/2a2c430b-c0dc-4154-a63f-32ffe8ef02fb.jpg"
+            },
+            {
+                "id": "bceb7084-1dda-4d76-b691-43c5a29d39a7",
+                "name": "Mitchell Starc",
+                "role": "Bowler",
+                "battingStyle": "Left Handed Bat",
+                "bowlingStyle": "Left-arm fast",
+                "country": "Australia",
+                "playerImg": "https://h.cricapi.com/img/players/bceb7084-1dda-4d76-b691-43c5a29d39a7.jpg"
+            },
+            {
+                "id": "3c89df94-f39c-4c51-8e64-441c73c32c78",
+                "name": "Angkrish Raghuvanshi",
+                "role": "Batting Allrounder",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Left-arm orthodox",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/icon512.png"
+            },
+            {
+                "id": "82de5824-b29b-4737-9e9d-44f5796ef227",
+                "name": "Vaibhav Arora",
+                "role": "Bowler",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm fast-medium",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/icon512.png"
+            },
+            {
+                "id": "ef2e9c01-41f2-4349-a945-45d8b11dbd19",
+                "name": "Sunil Narine",
+                "role": "Bowling Allrounder",
+                "battingStyle": "Left Handed Bat",
+                "bowlingStyle": "Right-arm offbreak",
+                "country": "West Indies",
+                "playerImg": "https://h.cricapi.com/img/players/ef2e9c01-41f2-4349-a945-45d8b11dbd19.jpg"
+            },
+            {
+                "id": "11864f31-b766-4766-9cbc-5026015ace48",
+                "name": "Rinku Singh",
+                "role": "Batsman",
+                "battingStyle": "Left Handed Bat",
+                "bowlingStyle": "Right-arm offbreak",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/players/11864f31-b766-4766-9cbc-5026015ace48.jpg"
+            },
+            {
+                "id": "02247315-1e19-4e52-b800-5f39efaf3839",
+                "name": "Sakib Hussain",
+                "role": "Batsman",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm medium",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/icon512.png"
+            },
+            {
+                "id": "64360dd6-a8db-47ae-8837-638a5bbbaae6",
+                "name": "Nitish Rana",
+                "role": "Batsman",
+                "battingStyle": "Left Handed Bat",
+                "bowlingStyle": "Right-arm offbreak",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/players/64360dd6-a8db-47ae-8837-638a5bbbaae6.jpg"
+            },
+            {
+                "id": "3187d301-269d-4823-b895-66d652ddefca",
+                "name": "Ramandeep Singh ",
+                "role": "Batsman",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm medium",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/icon512.png"
+            },
+            {
+                "id": "75fb3972-0436-40ee-bf45-73b1dba7b53e",
+                "name": "Dushmantha Chameera",
+                "role": "Bowler",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm fast",
+                "country": "Sri Lanka",
+                "playerImg": "https://h.cricapi.com/img/players/75fb3972-0436-40ee-bf45-73b1dba7b53e.jpg"
+            },
+            {
+                "id": "c978ce48-495b-4773-89c9-8a64d0257896",
+                "name": "Sherfane Rutherford",
+                "role": "Batting Allrounder",
+                "battingStyle": "Left Handed Bat",
+                "bowlingStyle": "Right-arm fast-medium",
+                "country": "West Indies",
+                "playerImg": "https://h.cricapi.com/img/players/c978ce48-495b-4773-89c9-8a64d0257896.jpg"
+            },
+            {
+                "id": "c3236037-6694-404a-8f01-9ad880564ea9",
+                "name": "Venkatesh Iyer",
+                "role": "Batting Allrounder",
+                "battingStyle": "Left Handed Bat",
+                "bowlingStyle": "Right-arm medium",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/players/c3236037-6694-404a-8f01-9ad880564ea9.jpg"
+            },
+            {
+                "id": "c8864ac7-af66-4719-8100-9dd9fd7e60f3",
+                "name": "Mujeeb Ur Rahman",
+                "role": "Bowler",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm offbreak",
+                "country": "Afghanistan",
+                "playerImg": "https://h.cricapi.com/img/players/c8864ac7-af66-4719-8100-9dd9fd7e60f3.jpg"
+            },
+            {
+                "id": "a25036dd-87e6-4038-b98f-b2f20ea6fb06",
+                "name": "Chetan Sakariya",
+                "role": "Bowler",
+                "battingStyle": "Left Handed Bat",
+                "bowlingStyle": "Left-arm fast-medium",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/players/a25036dd-87e6-4038-b98f-b2f20ea6fb06.jpg"
+            },
+            {
+                "id": "00fee12c-63aa-43ed-a1ed-cd156a2e26bc",
+                "name": "Rahmanullah Gurbaz",
+                "role": "WK-Batsman",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm medium",
+                "country": "Afghanistan",
+                "playerImg": "https://h.cricapi.com/img/players/00fee12c-63aa-43ed-a1ed-cd156a2e26bc.jpg"
+            },
+            {
+                "id": "2958faf6-f7d1-4150-aa9e-e261a629ba0d",
+                "name": "Anukul Roy",
+                "role": "Batting Allrounder",
+                "battingStyle": "Left Handed Bat",
+                "bowlingStyle": "Left-arm orthodox",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/players/2958faf6-f7d1-4150-aa9e-e261a629ba0d.jpg"
+            },
+            {
+                "id": "2bf2258f-f35e-4831-884e-f88ef46968f5",
+                "name": "Suyash Sharma",
+                "role": "Bowler",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm legbreak",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/icon512.png"
+            },
+            {
+                "id": "77791963-6c1b-4979-b07a-f910dee28cd9",
+                "name": "Shreyas Iyer",
+                "role": "Batsman",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm legbreak",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/players/77791963-6c1b-4979-b07a-f910dee28cd9.jpg"
+            }
+        ]
+    },
+    {
+        "teamName": "Gujarat Titans",
+        "shortname": "GT",
+        "img": "https://g.cricapi.com/iapi/172-637852957798476823.png?w=48",
+        "players": [
+            {
+                "id": "de60a340-5eb8-4160-861e-182aafd279c5",
+                "name": "Vijay Shankar",
+                "role": "Batting Allrounder",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm medium",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/players/de60a340-5eb8-4160-861e-182aafd279c5.jpg"
+            },
+            {
+                "id": "085d49b0-d5e5-4fc5-955b-39758a134545",
+                "name": "Rahul Tewatia",
+                "role": "Batting Allrounder",
+                "battingStyle": "Left Handed Bat",
+                "bowlingStyle": "Right-arm legbreak",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/players/085d49b0-d5e5-4fc5-955b-39758a134545.jpg"
+            },
+            {
+                "id": "1985ba7d-1f0a-4d4f-98d2-3ea741309a1a",
+                "name": "Umesh Yadav",
+                "role": "Bowler",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm fast",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/players/1985ba7d-1f0a-4d4f-98d2-3ea741309a1a.jpg"
+            },
+            {
+                "id": "9fc99793-a5b5-4eb2-9f7b-48cc3dc3cf8d",
+                "name": "Jayant Yadav",
+                "role": "Bowler",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm offbreak",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/players/9fc99793-a5b5-4eb2-9f7b-48cc3dc3cf8d.jpg"
+            },
+            {
+                "id": "fd2ee2dd-5051-4ced-baac-4c5a14253c6f",
+                "name": "Sushant Mishra",
+                "role": "Bowler",
+                "battingStyle": "Left Handed Bat",
+                "bowlingStyle": "Left-arm fast-medium",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/icon512.png"
+            },
+            {
+                "id": "f0687183-ad9a-44f7-9cbf-4f7eb0cbfb5a",
+                "name": "Rashid Khan",
+                "role": "Bowling Allrounder",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm legbreak",
+                "country": "Afghanistan",
+                "playerImg": "https://h.cricapi.com/img/players/f0687183-ad9a-44f7-9cbf-4f7eb0cbfb5a.jpg"
+            },
+            {
+                "id": "c8299338-660f-4870-a9bc-57359242411c",
+                "name": "Abhinav Manohar",
+                "role": "Batsman",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm legbreak",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/icon512.png"
+            },
+            {
+                "id": "a46cfa8b-96ae-4fb1-9499-65b8ce7e9634",
+                "name": "Kane Williamson",
+                "role": "Batsman",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm offbreak",
+                "country": "New Zealand",
+                "playerImg": "https://h.cricapi.com/img/players/a46cfa8b-96ae-4fb1-9499-65b8ce7e9634.jpg"
+            },
+            {
+                "id": "11d06633-aa20-469c-8fbb-676a1ae33eed",
+                "name": "Mohammed Shami",
+                "role": "Bowler",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm fast-medium",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/players/11d06633-aa20-469c-8fbb-676a1ae33eed.jpg"
+            },
+            {
+                "id": "7263e990-a9e9-4829-8adf-760d18d1315c",
+                "name": "Shubman Gill",
+                "role": "Batsman",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm offbreak",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/players/7263e990-a9e9-4829-8adf-760d18d1315c.jpg"
+            },
+            {
+                "id": "3791ce5c-78b6-4f08-859a-838115287f40",
+                "name": "Mohit Sharma",
+                "role": "Bowler",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm fast-medium",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/icon512.png"
+            },
+            {
+                "id": "ff17824f-0e1c-4eb7-acd3-8b5d116934bc",
+                "name": "Kartik Tyagi",
+                "role": "Bowler",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm fast-medium",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/players/ff17824f-0e1c-4eb7-acd3-8b5d116934bc.jpg"
+            },
+            {
+                "id": "29c70b54-732c-4439-9232-8d3a0a53a36c",
+                "name": "Darshan Nalkande",
+                "role": "Bowler",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm fast-medium",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/icon512.png"
+            },
+            {
+                "id": "9a057014-ba0b-4c93-a68c-9f4f8a7e67bc",
+                "name": "Joshua Little",
+                "role": "Bowler",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Left-arm fast",
+                "country": "Ireland",
+                "playerImg": "https://h.cricapi.com/img/players/9a057014-ba0b-4c93-a68c-9f4f8a7e67bc.jpg"
+            },
+            {
+                "id": "0284af4f-d4eb-4894-bacc-a468c1020951",
+                "name": "Spencer Johnson",
+                "role": "Bowler",
+                "battingStyle": "Left Handed Bat",
+                "bowlingStyle": "Left-arm fast-medium",
+                "country": "Australia",
+                "playerImg": "https://h.cricapi.com/img/icon512.png"
+            },
+            {
+                "id": "7d6bbd6c-c5bb-4e1c-9374-aaa829e77611",
+                "name": "Ravisrinivasan Sai Kishore",
+                "role": "Bowler",
+                "battingStyle": "Left Handed Bat",
+                "bowlingStyle": "Left-arm orthodox",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/players/7d6bbd6c-c5bb-4e1c-9374-aaa829e77611.jpg"
+            },
+            {
+                "id": "79f582a1-f5ab-4d30-8f5f-b05d4143608c",
+                "name": "Sai Sudharsan",
+                "role": "Batsman",
+                "battingStyle": "Left Handed Bat",
+                "bowlingStyle": "Right-arm legbreak",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/icon512.png"
+            },
+            {
+                "id": "3cbc5a08-62af-4ca5-b709-c7712db6e8b6",
+                "name": "Noor Ahmad",
+                "role": "Bowler",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Left-arm wrist-spin",
+                "country": "Afghanistan",
+                "playerImg": "https://h.cricapi.com/img/players/3cbc5a08-62af-4ca5-b709-c7712db6e8b6.jpg"
+            },
+            {
+                "id": "2f50df2f-809d-44f9-b5be-ccb846515861",
+                "name": "David Miller",
+                "role": "Batsman",
+                "battingStyle": "Left Handed Bat",
+                "bowlingStyle": "Right-arm offbreak",
+                "country": "South Africa",
+                "playerImg": "https://h.cricapi.com/img/players/2f50df2f-809d-44f9-b5be-ccb846515861.jpg"
+            },
+            {
+                "id": "21ffa053-b03d-4270-a49f-d3e2db9dfde7",
+                "name": "Robin Minz",
+                "role": "WK-Batsman",
+                "battingStyle": "Right Handed Bat",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/icon512.png"
+            },
+            {
+                "id": "b48e91c6-bbc9-40d9-be6e-d48d4d040dd6",
+                "name": "Matthew Wade",
+                "role": "WK-Batsman",
+                "battingStyle": "Left Handed Bat",
+                "country": "Australia",
+                "playerImg": "https://h.cricapi.com/img/players/b48e91c6-bbc9-40d9-be6e-d48d4d040dd6.jpg"
+            },
+            {
+                "id": "200bb9d2-a3e4-43ac-8774-f3b3a5577ffc",
+                "name": "Wriddhiman Saha",
+                "role": "WK-Batsman",
+                "battingStyle": "Right Handed Bat",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/players/200bb9d2-a3e4-43ac-8774-f3b3a5577ffc.jpg"
+            },
+            {
+                "id": "7c341a4c-d3fa-4054-b95d-f75f94eee00c",
+                "name": "Azmatullah Omarzai",
+                "role": "Bowling Allrounder",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm fast-medium",
+                "country": "Afghanistan",
+                "playerImg": "https://h.cricapi.com/img/players/7c341a4c-d3fa-4054-b95d-f75f94eee00c.jpg"
+            },
+            {
+                "id": "d0f69230-16e0-4a79-92aa-f9f7c588d5d3",
+                "name": "Shahrukh Khan",
+                "role": "Batting Allrounder",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm offbreak",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/players/d0f69230-16e0-4a79-92aa-f9f7c588d5d3.jpg"
+            }
+        ]
+    },
+    {
+        "teamName": "Punjab Kings",
+        "shortname": "PBKS",
+        "img": "https://g.cricapi.com/iapi/247-637852956959778791.png?w=48",
+        "players": [
+            {
+                "id": "46f42ff2-6167-4b13-9e47-030ad9e5bfaf",
+                "name": "Chris Woakes",
+                "role": "Bowling Allrounder",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm fast-medium",
+                "country": "England",
+                "playerImg": "https://h.cricapi.com/img/players/46f42ff2-6167-4b13-9e47-030ad9e5bfaf.jpg"
+            },
+            {
+                "id": "715107b5-0412-452b-aa0b-04394f7b1327",
+                "name": "Jonny Bairstow",
+                "role": "WK-Batsman",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm medium",
+                "country": "England",
+                "playerImg": "https://h.cricapi.com/img/players/715107b5-0412-452b-aa0b-04394f7b1327.jpg"
+            },
+            {
+                "id": "607ff10c-5619-411d-a822-06ba28992230",
+                "name": "Arshdeep Singh",
+                "role": "Bowler",
+                "battingStyle": "Left Handed Bat",
+                "bowlingStyle": "Left-arm fast-medium",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/players/607ff10c-5619-411d-a822-06ba28992230.jpg"
+            },
+            {
+                "id": "118d7014-c8fb-4d16-a05e-14d8d6338f7b",
+                "name": "Tanay Thyagarajan",
+                "role": "Bowling Allrounder",
+                "battingStyle": "Left Handed Bat",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/icon512.png"
+            },
+            {
+                "id": "a81da20a-e420-476a-baf6-204fc219dbdd",
+                "name": "Kagiso Rabada",
+                "role": "Bowler",
+                "battingStyle": "Left Handed Bat",
+                "bowlingStyle": "Right-arm fast",
+                "country": "South Africa",
+                "playerImg": "https://h.cricapi.com/img/players/a81da20a-e420-476a-baf6-204fc219dbdd.jpg"
+            },
+            {
+                "id": "3a93bfb5-1fd1-4342-99f1-397161de9d10",
+                "name": "Sikandar Raza",
+                "role": "Batting Allrounder",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm offbreak",
+                "country": "Zimbabwe",
+                "playerImg": "https://h.cricapi.com/img/players/3a93bfb5-1fd1-4342-99f1-397161de9d10.jpg"
+            },
+            {
+                "id": "a2913c1e-478a-4655-a0e2-3a5a4b694de3",
+                "name": "Vishwanath Singh",
+                "role": "--",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm offbreak",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/icon512.png"
+            },
+            {
+                "id": "347b673e-6aac-4f03-bcfe-3b988347b345",
+                "name": "Rilee Rossouw",
+                "role": "Batsman",
+                "battingStyle": "Left Handed Bat",
+                "bowlingStyle": "Right-arm offbreak",
+                "country": "South Africa",
+                "playerImg": "https://h.cricapi.com/img/players/347b673e-6aac-4f03-bcfe-3b988347b345.jpg"
+            },
+            {
+                "id": "0cd26e8a-357c-49b2-8e4d-4335f05ba8c0",
+                "name": "Rishi Dhawan",
+                "role": "Bowling Allrounder",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm fast-medium",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/players/0cd26e8a-357c-49b2-8e4d-4335f05ba8c0.jpg"
+            },
+            {
+                "id": "cd5a9124-db0b-4cf8-b541-4f8830e02c0c",
+                "name": "Ashutosh Sharma",
+                "role": "Batsman",
+                "battingStyle": "Right Handed Bat",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/icon512.png"
+            },
+            {
+                "id": "15bccb4f-8c3c-4da6-acd9-551782278bfd",
+                "name": "Harshal Patel",
+                "role": "Bowler",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm fast-medium",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/players/15bccb4f-8c3c-4da6-acd9-551782278bfd.jpg"
+            },
+            {
+                "id": "9b7ee560-6928-4c65-9975-6c4a34fa7947",
+                "name": "Harpreet Singh Bhatia",
+                "role": "Batsman",
+                "battingStyle": "Left Handed Bat",
+                "bowlingStyle": "Right-arm medium",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/players/9b7ee560-6928-4c65-9975-6c4a34fa7947.jpg"
+            },
+            {
+                "id": "d774adaf-78f0-4bf3-965e-8182c05b4517",
+                "name": "Rahul Chahar",
+                "role": "Bowler",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm legbreak",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/players/d774adaf-78f0-4bf3-965e-8182c05b4517.jpg"
+            },
+            {
+                "id": "a15dfada-704c-42c3-9545-91c332ffca73",
+                "name": "Prabhsimran Singh",
+                "role": "WK-Batsman",
+                "battingStyle": "Right Handed Bat",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/players/a15dfada-704c-42c3-9545-91c332ffca73.jpg"
+            },
+            {
+                "id": "e3005322-b01a-4c58-9b26-a2ca150ad1d1",
+                "name": "Harpreet Brar",
+                "role": "Batting Allrounder",
+                "battingStyle": "Left Handed Bat",
+                "bowlingStyle": "Left-arm orthodox",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/players/e3005322-b01a-4c58-9b26-a2ca150ad1d1.jpg"
+            },
+            {
+                "id": "ae028205-72ab-445a-a6e1-addf52de00c2",
+                "name": "Atharva Taide",
+                "role": "Batsman",
+                "battingStyle": "Left Handed Bat",
+                "bowlingStyle": "Left-arm orthodox",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/icon512.png"
+            },
+            {
+                "id": "05bb5069-68d9-422d-9676-ba5656672227",
+                "name": "Shikhar Dhawan",
+                "role": "Batsman",
+                "battingStyle": "Left Handed Bat",
+                "bowlingStyle": "Right-arm offbreak",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/players/05bb5069-68d9-422d-9676-ba5656672227.jpg"
+            },
+            {
+                "id": "f8bab7de-7c53-4ab5-ba38-c30641834b8f",
+                "name": "Shivam Singh",
+                "role": "Batsman",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm offbreak",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/icon512.png"
+            },
+            {
+                "id": "e28de73b-f5df-49eb-bdf6-c50471319404",
+                "name": "Jitesh Sharma",
+                "role": "WK-Batsman",
+                "battingStyle": "Right Handed Bat",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/players/e28de73b-f5df-49eb-bdf6-c50471319404.jpg"
+            },
+            {
+                "id": "45613012-5c4f-4a7a-a1c4-d9827939b2bf",
+                "name": "Sam Curran",
+                "role": "Bowling Allrounder",
+                "battingStyle": "Left Handed Bat",
+                "bowlingStyle": "Left-arm fast-medium",
+                "country": "England",
+                "playerImg": "https://h.cricapi.com/img/players/45613012-5c4f-4a7a-a1c4-d9827939b2bf.jpg"
+            },
+            {
+                "id": "723fa87f-ca5b-459f-8644-d98f8ed9e806",
+                "name": "Vidhwath Kaverappa",
+                "role": "Bowler",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm fast-medium",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/icon512.png"
+            },
+            {
+                "id": "d1c0a448-6ee6-473a-90a2-e6a486698a8a",
+                "name": "Liam Livingstone",
+                "role": "Batting Allrounder",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm legbreak",
+                "country": "England",
+                "playerImg": "https://h.cricapi.com/img/players/d1c0a448-6ee6-473a-90a2-e6a486698a8a.jpg"
+            },
+            {
+                "id": "9d6cb002-6b9f-4795-a9bf-ea1a6e27ed08",
+                "name": "Shashank Singh",
+                "role": "Batsman",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm medium",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/icon512.png"
+            },
+            {
+                "id": "6731db45-8132-49c6-8fcb-f59258d15082",
+                "name": "Nathan Ellis",
+                "role": "Bowler",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm fast-medium",
+                "country": "Australia",
+                "playerImg": "https://h.cricapi.com/img/players/6731db45-8132-49c6-8fcb-f59258d15082.jpg"
+            },
+            {
+                "id": "00df0970-e49d-4c4c-9aca-f8568b49a4d2",
+                "name": "Prince Choudhary",
+                "role": "--",
+                "battingStyle": "Right Handed Bat",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/icon512.png"
+            }
+        ]
+    },
+    {
+        "teamName": "Chennai Super Kings",
+        "shortname": "CSK",
+        "img": "https://g.cricapi.com/iapi/135-637852956181378533.png?w=48",
+        "players": [
+            {
+                "id": "c1257351-51ca-446f-b7f5-01fe92e75076",
+                "name": "Shardul Thakur",
+                "role": "Bowler",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm fast-medium",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/players/c1257351-51ca-446f-b7f5-01fe92e75076.jpg"
+            },
+            {
+                "id": "4f95ebbb-226b-4bef-bd2c-02daec890ba4",
+                "name": "Shaik Rasheed",
+                "role": "Batsman",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm legbreak",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/icon512.png"
+            },
+            {
+                "id": "81b446e1-bfea-45a7-a15e-062b8157a323",
+                "name": "Ravindra Jadeja",
+                "role": "Bowling Allrounder",
+                "battingStyle": "Left Handed Bat",
+                "bowlingStyle": "Left-arm orthodox",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/players/81b446e1-bfea-45a7-a15e-062b8157a323.jpg"
+            },
+            {
+                "id": "3ec5f8da-2054-4ebb-b9be-2668ddc45e66",
+                "name": "Sameer Rizvi ",
+                "role": "Batsman",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm offbreak",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/icon512.png"
+            },
+            {
+                "id": "4d066db8-b202-45a4-8408-28b335c5a767",
+                "name": "RS Hangargekar",
+                "role": "Bowler",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm fast-medium",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/players/4d066db8-b202-45a4-8408-28b335c5a767.jpg"
+            },
+            {
+                "id": "cdc2646c-1fe7-4bc2-b26e-42453f45a212",
+                "name": "Ajinkya Rahane",
+                "role": "Batsman",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm medium",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/players/cdc2646c-1fe7-4bc2-b26e-42453f45a212.jpg"
+            },
+            {
+                "id": "f3876b65-0643-49df-9255-4a06dd3fa051",
+                "name": "Tushar Deshpande",
+                "role": "Bowler",
+                "battingStyle": "Left Handed Bat",
+                "bowlingStyle": "Right-arm medium",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/players/f3876b65-0643-49df-9255-4a06dd3fa051.jpg"
+            },
+            {
+                "id": "b6e7aa41-b0bb-4b0f-8f59-59f729283be5",
+                "name": "MS Dhoni",
+                "role": "WK-Batsman",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm medium",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/players/b6e7aa41-b0bb-4b0f-8f59-59f729283be5.jpg"
+            },
+            {
+                "id": "7e09eef0-d886-4997-b568-5fd4e0dfbbec",
+                "name": "Maheesh Theekshana",
+                "role": "Bowler",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm offbreak",
+                "country": "Sri Lanka",
+                "playerImg": "https://h.cricapi.com/img/players/7e09eef0-d886-4997-b568-5fd4e0dfbbec.jpg"
+            },
+            {
+                "id": "014ba4b1-423c-49d3-a6f5-68e6bb90835e",
+                "name": "Ajay Jadav Mandal",
+                "role": "Bowler",
+                "battingStyle": "Left Handed Bat",
+                "bowlingStyle": "Left-arm orthodox",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/icon512.png"
+            },
+            {
+                "id": "9f06f450-c300-4b49-9359-7876f492f686",
+                "name": "Moeen Ali",
+                "role": "Batting Allrounder",
+                "battingStyle": "Left Handed Bat",
+                "bowlingStyle": "Right-arm offbreak",
+                "country": "England",
+                "playerImg": "https://h.cricapi.com/img/players/9f06f450-c300-4b49-9359-7876f492f686.jpg"
+            },
+            {
+                "id": "dc2f7f59-ce15-48aa-b7d9-793314961076",
+                "name": "Mukesh Choudhary",
+                "role": "Bowler",
+                "battingStyle": "Left Handed Bat",
+                "bowlingStyle": "Left-arm medium",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/icon512.png"
+            },
+            {
+                "id": "4a0a483d-de7f-4313-b2ed-8eceb3d8bb45",
+                "name": "Mustafizur Rahman",
+                "role": "Bowler",
+                "battingStyle": "Left Handed Bat",
+                "bowlingStyle": "Left-arm fast-medium",
+                "country": "Bangladesh",
+                "playerImg": "https://h.cricapi.com/img/players/4a0a483d-de7f-4313-b2ed-8eceb3d8bb45.jpg"
+            },
+            {
+                "id": "d59bfc6b-bf4c-4a23-aa82-954911b0973d",
+                "name": "Matheesha Pathirana",
+                "role": "Bowler",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm fast",
+                "country": "Sri Lanka",
+                "playerImg": "https://h.cricapi.com/img/icon512.png"
+            },
+            {
+                "id": "e6d28951-8524-43ca-95cf-9e73ae68bc12",
+                "name": "Rachin Ravindra",
+                "role": "Batting Allrounder",
+                "battingStyle": "Left Handed Bat",
+                "bowlingStyle": "Left-arm orthodox",
+                "country": "New Zealand",
+                "playerImg": "https://h.cricapi.com/img/players/e6d28951-8524-43ca-95cf-9e73ae68bc12.jpg"
+            },
+            {
+                "id": "5d15a50d-3d28-4576-b237-a0029d0933da",
+                "name": "Prashant Solanki",
+                "role": "Bowler",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm legbreak",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/icon512.png"
+            },
+            {
+                "id": "7437b764-9181-49b5-9413-b4eda0505d4a",
+                "name": "Aravelly Avanish",
+                "role": "WK-Batsman",
+                "battingStyle": "Left Handed Bat",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/icon512.png"
+            },
+            {
+                "id": "50b70c71-1535-41c0-87fd-c12883105ede",
+                "name": "Ruturaj Gaikwad",
+                "role": "Batsman",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm offbreak",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/players/50b70c71-1535-41c0-87fd-c12883105ede.jpg"
+            },
+            {
+                "id": "22ee45d8-0538-4e3e-a758-c515f9b86d11",
+                "name": "Shivam Dube",
+                "role": "Bowling Allrounder",
+                "battingStyle": "Left Handed Bat",
+                "bowlingStyle": "Right-arm medium",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/players/22ee45d8-0538-4e3e-a758-c515f9b86d11.jpg"
+            },
+            {
+                "id": "60610403-b20d-41b5-a1f9-ca5981d192e1",
+                "name": "Simarjeet Singh",
+                "role": "Bowler",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm fast-medium",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/icon512.png"
+            },
+            {
+                "id": "16ec245b-022d-4104-bd8f-ccc780428390",
+                "name": "Mitchell Santner",
+                "role": "Bowling Allrounder",
+                "battingStyle": "Left Handed Bat",
+                "bowlingStyle": "Left-arm orthodox",
+                "country": "New Zealand",
+                "playerImg": "https://h.cricapi.com/img/players/16ec245b-022d-4104-bd8f-ccc780428390.jpg"
+            },
+            {
+                "id": "237a1ef2-1eae-4877-8b94-d20d84faf635",
+                "name": "Deepak Chahar",
+                "role": "Bowler",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm medium",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/players/237a1ef2-1eae-4877-8b94-d20d84faf635.jpg"
+            },
+            {
+                "id": "f75212f8-37fb-4cf0-8f37-d681b4cb66b2",
+                "name": "Daryl Mitchell",
+                "role": "Batting Allrounder",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm medium",
+                "country": "New Zealand",
+                "playerImg": "https://h.cricapi.com/img/players/f75212f8-37fb-4cf0-8f37-d681b4cb66b2.jpg"
+            },
+            {
+                "id": "3a51a030-8cac-42c7-8a47-e32fd1bcedd4",
+                "name": "Nishant Sindhu",
+                "role": "Batting Allrounder",
+                "battingStyle": "Left Handed Bat",
+                "bowlingStyle": "Left-arm orthodox",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/icon512.png"
+            },
+            {
+                "id": "eac0032b-055a-497b-9d4e-f54008414515",
+                "name": "Devon Conway",
+                "role": "WK-Batsman",
+                "battingStyle": "Left Handed Bat",
+                "bowlingStyle": "Right-arm medium",
+                "country": "New Zealand",
+                "playerImg": "https://h.cricapi.com/img/players/eac0032b-055a-497b-9d4e-f54008414515.jpg"
+            }
+        ]
+    },
+    {
+        "teamName": "Sunrisers Hyderabad",
+        "shortname": "SRH",
+        "img": "https://g.cricapi.com/iapi/279-637852957609490368.png?w=48",
+        "players": [
+            {
+                "id": "7d662361-8f12-4a52-9a4b-01e8734bd31d",
+                "name": "Heinrich Klaasen",
+                "role": "WK-Batsman",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm offbreak",
+                "country": "South Africa",
+                "playerImg": "https://h.cricapi.com/img/players/7d662361-8f12-4a52-9a4b-01e8734bd31d.jpg"
+            },
+            {
+                "id": "3f3ecf51-8411-4046-9477-18c0fe3da6ac",
+                "name": "Bhuvneshwar Kumar",
+                "role": "Bowler",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm fast-medium",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/players/3f3ecf51-8411-4046-9477-18c0fe3da6ac.jpg"
+            },
+            {
+                "id": "d3c53885-7016-4228-8a20-1dd98214489d",
+                "name": "Marco Jansen",
+                "role": "Bowling Allrounder",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Left-arm fast",
+                "country": "South Africa",
+                "playerImg": "https://h.cricapi.com/img/players/d3c53885-7016-4228-8a20-1dd98214489d.jpg"
+            },
+            {
+                "id": "b2919aba-b8de-4844-bced-26b30bbe9c6d",
+                "name": "Mayank Agarwal",
+                "role": "Batsman",
+                "battingStyle": "Right Handed Bat",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/players/b2919aba-b8de-4844-bced-26b30bbe9c6d.jpg"
+            },
+            {
+                "id": "c06c697c-9575-4bb0-b1f0-27a56a2f3898",
+                "name": "Mayank Markande",
+                "role": "Bowler",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm legbreak",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/players/c06c697c-9575-4bb0-b1f0-27a56a2f3898.jpg"
+            },
+            {
+                "id": "4181e4fa-b7e9-4357-8411-4ad176bc5a7f",
+                "name": "Upendra Yadav",
+                "role": "WK-Batsman",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm offbreak",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/icon512.png"
+            },
+            {
+                "id": "9e6fa482-3ad3-4831-b05d-4fed2510cdf5",
+                "name": "Glenn Phillips",
+                "role": "Batsman",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm offbreak",
+                "country": "New Zealand",
+                "playerImg": "https://h.cricapi.com/img/players/9e6fa482-3ad3-4831-b05d-4fed2510cdf5.jpg"
+            },
+            {
+                "id": "3fef81b0-c1e9-45eb-954f-519f3b33d640",
+                "name": "Aiden Markram",
+                "role": "Batsman",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm offbreak",
+                "country": "South Africa",
+                "playerImg": "https://h.cricapi.com/img/players/3fef81b0-c1e9-45eb-954f-519f3b33d640.jpg"
+            },
+            {
+                "id": "5bf98798-b2b0-47d2-b799-5307c0fd4936",
+                "name": "Nitish Reddy",
+                "role": "Bowler",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm fast-medium",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/icon512.png"
+            },
+            {
+                "id": "865326f2-3524-478d-9816-5d43158edc7d",
+                "name": "Akash Singh",
+                "role": "Batsman",
+                "battingStyle": "Right Handed Bat",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/icon512.png"
+            },
+            {
+                "id": "42718b9d-5419-4fa2-8f55-6ce96fe9d2db",
+                "name": "Anmolpreet Singh",
+                "role": "Batsman",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm offbreak",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/players/42718b9d-5419-4fa2-8f55-6ce96fe9d2db.jpg"
+            },
+            {
+                "id": "fb313a9a-0a14-499d-a8d1-7561bccea8cb",
+                "name": "Rahul Tripathi",
+                "role": "Batsman",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm medium",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/players/fb313a9a-0a14-499d-a8d1-7561bccea8cb.jpg"
+            },
+            {
+                "id": "dd665f5d-04e8-436b-b376-8fd2a9b8bf8a",
+                "name": "Abdul Samad",
+                "role": "Batsman",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm legbreak",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/players/dd665f5d-04e8-436b-b376-8fd2a9b8bf8a.jpg"
+            },
+            {
+                "id": "83fe6ab6-d63c-420e-9416-a93d59a9a964",
+                "name": "Abhishek Sharma",
+                "role": "Bowling Allrounder",
+                "battingStyle": "Left Handed Bat",
+                "bowlingStyle": "Left-arm orthodox",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/players/83fe6ab6-d63c-420e-9416-a93d59a9a964.jpg"
+            },
+            {
+                "id": "dd97ff62-3348-4030-9507-af7521615c94",
+                "name": "Jhatavedh Subramanyan",
+                "role": "Bowler",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm legbreak",
+                "country": "Hong Kong",
+                "playerImg": "https://h.cricapi.com/img/icon512.png"
+            },
+            {
+                "id": "d8826d0d-ef95-4dce-a47a-b09b97f49f07",
+                "name": "T Natarajan",
+                "role": "Bowler",
+                "battingStyle": "Left Handed Bat",
+                "bowlingStyle": "Left-arm fast-medium",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/players/d8826d0d-ef95-4dce-a47a-b09b97f49f07.jpg"
+            },
+            {
+                "id": "309d3ffd-3d06-460d-9427-c559a604d471",
+                "name": "Washington Sundar",
+                "role": "Batting Allrounder",
+                "battingStyle": "Left Handed Bat",
+                "bowlingStyle": "Right-arm offbreak",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/players/309d3ffd-3d06-460d-9427-c559a604d471.jpg"
+            },
+            {
+                "id": "13b3d56e-0fba-4d31-a174-d211211404e2",
+                "name": "Pat Cummins",
+                "role": "Bowler",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm fast",
+                "country": "Australia",
+                "playerImg": "https://h.cricapi.com/img/players/13b3d56e-0fba-4d31-a174-d211211404e2.jpg"
+            },
+            {
+                "id": "d6720897-e81d-4703-bf33-d2b60c973d30",
+                "name": "Travis Head",
+                "role": "Batsman",
+                "battingStyle": "Left Handed Bat",
+                "bowlingStyle": "Right-arm offbreak",
+                "country": "Australia",
+                "playerImg": "https://h.cricapi.com/img/players/d6720897-e81d-4703-bf33-d2b60c973d30.jpg"
+            },
+            {
+                "id": "92045c02-25e9-4980-a58f-daedd067d1ce",
+                "name": "Fazalhaq Farooqi",
+                "role": "Bowler",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Left-arm fast-medium",
+                "country": "Afghanistan",
+                "playerImg": "https://h.cricapi.com/img/players/92045c02-25e9-4980-a58f-daedd067d1ce.jpg"
+            },
+            {
+                "id": "f589d2a9-4e44-464d-9741-e224354a1370",
+                "name": "Jaydev Unadkat",
+                "role": "Bowler",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Left-arm fast-medium",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/players/f589d2a9-4e44-464d-9741-e224354a1370.jpg"
+            },
+            {
+                "id": "8f4c667c-4bb2-4808-a77b-ebece70f4273",
+                "name": "Shahbaz Ahmed",
+                "role": "Bowling Allrounder",
+                "battingStyle": "Left Handed Bat",
+                "bowlingStyle": "Left-arm orthodox",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/players/8f4c667c-4bb2-4808-a77b-ebece70f4273.jpg"
+            },
+            {
+                "id": "621c0c1d-5c23-41dc-8d1a-f0dbe60f764f",
+                "name": "Sanvir Singh",
+                "role": "Batting Allrounder",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm medium",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/icon512.png"
+            }
+        ]
+    },
+    {
+        "teamName": "Rajasthan Royals",
+        "shortname": "RR",
+        "img": "https://g.cricapi.com/iapi/251-637852956607161886.png?w=48",
+        "players": [
+            {
+                "id": "0d704a13-518a-40a7-bb93-0fc0d92af9e2",
+                "name": "Yuzvendra Chahal",
+                "role": "Bowler",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm legbreak",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/players/0d704a13-518a-40a7-bb93-0fc0d92af9e2.jpg"
+            },
+            {
+                "id": "3545d689-5166-440e-9eaf-1409e554a547",
+                "name": "Nandre Burger",
+                "role": "Bowler",
+                "battingStyle": "Left Handed Bat",
+                "bowlingStyle": "Left-arm fast-medium",
+                "country": "South Africa",
+                "playerImg": "https://h.cricapi.com/img/icon512.png"
+            },
+            {
+                "id": "4269d64c-962d-4cd9-b2d2-1a62f51256b8",
+                "name": "Shimron Hetmyer",
+                "role": "Batsman",
+                "battingStyle": "Left Handed Bat",
+                "country": "West Indies",
+                "playerImg": "https://h.cricapi.com/img/players/4269d64c-962d-4cd9-b2d2-1a62f51256b8.jpg"
+            },
+            {
+                "id": "259051b9-d5c9-42f7-9b49-20dc69efdab8",
+                "name": "Kunal Singh Rathore",
+                "role": "Batsman",
+                "battingStyle": "Left Handed Bat",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/icon512.png"
+            },
+            {
+                "id": "58cd4af5-3c85-4bf0-94fd-25fe051c9845",
+                "name": "Tom Kohler-Cadmore",
+                "role": "WK-Batsman",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm offbreak",
+                "country": "England",
+                "playerImg": "https://h.cricapi.com/img/players/58cd4af5-3c85-4bf0-94fd-25fe051c9845.jpg"
+            },
+            {
+                "id": "6004fd3f-2264-470d-b39f-340d530b19b3",
+                "name": "Trent Boult",
+                "role": "Bowler",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Left-arm fast-medium",
+                "country": "New Zealand",
+                "playerImg": "https://h.cricapi.com/img/players/6004fd3f-2264-470d-b39f-340d530b19b3.jpg"
+            },
+            {
+                "id": "c6442879-0071-438a-a48e-4eb9c549ec13",
+                "name": "Shubham Dubey",
+                "role": "Batsman",
+                "battingStyle": "Left Handed Bat",
+                "bowlingStyle": "Right-arm offbreak",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/icon512.png"
+            },
+            {
+                "id": "0068c9d8-be69-46b9-bbef-62c74e480781",
+                "name": "Ravichandran Ashwin",
+                "role": "Bowling Allrounder",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm offbreak",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/players/0068c9d8-be69-46b9-bbef-62c74e480781.jpg"
+            },
+            {
+                "id": "c699ec2b-a5f6-4ee0-a42d-79391b65b293",
+                "name": "Rovman Powell",
+                "role": "Batsman",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm fast-medium",
+                "country": "West Indies",
+                "playerImg": "https://h.cricapi.com/img/players/c699ec2b-a5f6-4ee0-a42d-79391b65b293.jpg"
+            },
+            {
+                "id": "b51bb4e5-acdf-423b-abb3-7a1e6694d2c2",
+                "name": "Riyan Parag",
+                "role": "Batting Allrounder",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm legbreak",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/players/b51bb4e5-acdf-423b-abb3-7a1e6694d2c2.jpg"
+            },
+            {
+                "id": "a254feed-0d7c-4f04-a2ab-7bf9ceef156b",
+                "name": "Yashasvi Jaiswal",
+                "role": "Batsman",
+                "battingStyle": "Left Handed Bat",
+                "bowlingStyle": "Right-arm legbreak",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/players/a254feed-0d7c-4f04-a2ab-7bf9ceef156b.jpg"
+            },
+            {
+                "id": "21d693c2-b4dd-4d24-b747-90dfc8357ef5",
+                "name": "Dhruv Jurel",
+                "role": "WK-Batsman",
+                "battingStyle": "Right Handed Bat",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/players/21d693c2-b4dd-4d24-b747-90dfc8357ef5.jpg"
+            },
+            {
+                "id": "890c076c-bf46-413e-a994-91da46c59c0e",
+                "name": "Abid Mushtaq",
+                "role": "Bowler",
+                "battingStyle": "Left Handed Bat",
+                "bowlingStyle": "Left-arm orthodox",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/icon512.png"
+            },
+            {
+                "id": "80193c8f-687d-47c3-a7e9-b098a83c7812",
+                "name": "Navdeep Saini",
+                "role": "Bowler",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm fast",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/players/80193c8f-687d-47c3-a7e9-b098a83c7812.jpg"
+            },
+            {
+                "id": "1971093d-b87b-43db-8b1d-b2dcc8e68617",
+                "name": "Adam Zampa",
+                "role": "Bowler",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm legbreak",
+                "country": "Australia",
+                "playerImg": "https://h.cricapi.com/img/players/1971093d-b87b-43db-8b1d-b2dcc8e68617.jpg"
+            },
+            {
+                "id": "332200ad-d1f8-4035-95c5-b33bd1c9a939",
+                "name": "Avesh Khan",
+                "role": "Bowler",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm fast-medium",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/players/332200ad-d1f8-4035-95c5-b33bd1c9a939.jpg"
+            },
+            {
+                "id": "b43c2877-2cb4-41f5-951d-bc006eb4f6c0",
+                "name": "Kuldeep Sen",
+                "role": "Bowler",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm fast-medium",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/icon512.png"
+            },
+            {
+                "id": "3f18b02d-0e1a-49be-aec4-c2fc11503505",
+                "name": "Sandeep Sharma",
+                "role": "Bowler",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm fast-medium",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/players/3f18b02d-0e1a-49be-aec4-c2fc11503505.jpg"
+            },
+            {
+                "id": "3f9ced2d-d71a-4478-93db-d7260c7145ee",
+                "name": "Donovan Ferreira",
+                "role": "WK-Batsman",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm offbreak",
+                "country": "South Africa",
+                "playerImg": "https://h.cricapi.com/img/icon512.png"
+            },
+            {
+                "id": "35ed1b20-38f3-4013-be2e-dc28ffbecfd6",
+                "name": "Sanju Samson",
+                "role": "WK-Batsman",
+                "battingStyle": "Right Handed Bat",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/players/35ed1b20-38f3-4013-be2e-dc28ffbecfd6.jpg"
+            },
+            {
+                "id": "99eb6b5c-379f-46da-bab7-dc8fd31ba435",
+                "name": "Prasidh Krishna",
+                "role": "Bowler",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm fast-medium",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/players/99eb6b5c-379f-46da-bab7-dc8fd31ba435.jpg"
+            },
+            {
+                "id": "7567e305-1b40-4eee-9290-e2fcb8804496",
+                "name": "Jos Buttler",
+                "role": "WK-Batsman",
+                "battingStyle": "Right Handed Bat",
+                "country": "England",
+                "playerImg": "https://h.cricapi.com/img/players/7567e305-1b40-4eee-9290-e2fcb8804496.jpg"
+            }
+        ]
+    },
+    {
+        "teamName": "Royal Challengers Bangalore",
+        "shortname": "RCB",
+        "img": "https://g.cricapi.com/iapi/261-637852957972423711.png?w=48",
+        "players": [
+            {
+                "id": "c0da8d4d-5c30-4cfa-9c20-0340f6752e0b",
+                "name": "Himanshu Sharma",
+                "role": "Bowler",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm legbreak",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/icon512.png"
+            },
+            {
+                "id": "c510fbe6-8a16-47e4-ab60-0965720241af",
+                "name": "Will Jacks",
+                "role": "Batting Allrounder",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm offbreak",
+                "country": "England",
+                "playerImg": "https://h.cricapi.com/img/icon512.png"
+            },
+            {
+                "id": "4ad2ef53-de91-4ac2-a50a-0cde29e69177",
+                "name": "Glenn Maxwell",
+                "role": "Batting Allrounder",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm offbreak",
+                "country": "Australia",
+                "playerImg": "https://h.cricapi.com/img/players/4ad2ef53-de91-4ac2-a50a-0cde29e69177.jpg"
+            },
+            {
+                "id": "e94fee21-b257-43b8-b9e0-1073dde8f154",
+                "name": "Mahipal Lomror",
+                "role": "Batting Allrounder",
+                "battingStyle": "Left Handed Bat",
+                "bowlingStyle": "Left-arm orthodox",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/players/e94fee21-b257-43b8-b9e0-1073dde8f154.jpg"
+            },
+            {
+                "id": "1989ac7c-a6cb-4171-bc83-16a2323d2fe8",
+                "name": "Manoj Bhandage",
+                "role": "Batting Allrounder",
+                "battingStyle": "Left Handed Bat",
+                "bowlingStyle": "Right-arm fast-medium",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/icon512.png"
+            },
+            {
+                "id": "8bea31ce-e698-4aea-9375-1f0342edb254",
+                "name": "Tom Curran",
+                "role": "Bowling Allrounder",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm fast-medium",
+                "country": "England",
+                "playerImg": "https://h.cricapi.com/img/players/8bea31ce-e698-4aea-9375-1f0342edb254.jpg"
+            },
+            {
+                "id": "70ac103d-2864-4ccf-8248-266c644cf96c",
+                "name": "Suyash Prabhudessai",
+                "role": "Batsman",
+                "battingStyle": "Right Handed Bat",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/icon512.png"
+            },
+            {
+                "id": "c61d247d-7f77-452c-b495-2813a9cd0ac4",
+                "name": "Virat Kohli",
+                "role": "Batsman",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm medium",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/players/c61d247d-7f77-452c-b495-2813a9cd0ac4.jpg"
+            },
+            {
+                "id": "355811ac-5b5e-4e55-9e8c-2b29e7950418",
+                "name": "Saurav Chauhan",
+                "role": "Batting Allrounder",
+                "battingStyle": "Left Handed Bat",
+                "bowlingStyle": "Left-arm orthodox",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/icon512.png"
+            },
+            {
+                "id": "4acab86f-c5f1-42b8-9a8d-2ee86b7175f4",
+                "name": "Rajan Kumar",
+                "role": "Bowler",
+                "battingStyle": "Left Handed Bat",
+                "bowlingStyle": "Left-arm fast-medium",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/icon512.png"
+            },
+            {
+                "id": "2a8d8640-2213-4cf6-ac7e-309d8b733e96",
+                "name": "Mohammed Siraj",
+                "role": "Bowler",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm fast-medium",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/players/2a8d8640-2213-4cf6-ac7e-309d8b733e96.jpg"
+            },
+            {
+                "id": "604d7c88-4f5d-40d9-b08b-330420964d87",
+                "name": "Lockie Ferguson",
+                "role": "Bowler",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm fast",
+                "country": "New Zealand",
+                "playerImg": "https://h.cricapi.com/img/players/604d7c88-4f5d-40d9-b08b-330420964d87.jpg"
+            },
+            {
+                "id": "eff809fc-9841-4825-a89f-381db15ad0a2",
+                "name": "Vijaykumar Vyshak",
+                "role": "Bowler",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm medium",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/icon512.png"
+            },
+            {
+                "id": "2ff6091e-f412-422d-a5fe-3d8d1a3dd673",
+                "name": "Alzarri Joseph",
+                "role": "Bowler",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm fast-medium",
+                "country": "West Indies",
+                "playerImg": "https://h.cricapi.com/img/players/2ff6091e-f412-422d-a5fe-3d8d1a3dd673.jpg"
+            },
+            {
+                "id": "f061b5fc-cd70-480c-86aa-45c7828e739c",
+                "name": "Yash Dayal",
+                "role": "Bowler",
+                "battingStyle": "Left Handed Bat",
+                "bowlingStyle": "Left-arm fast-medium",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/icon512.png"
+            },
+            {
+                "id": "b3d830d8-5349-407a-bc51-59f2d15a92de",
+                "name": "Dinesh Karthik",
+                "role": "WK-Batsman",
+                "battingStyle": "Right Handed Bat",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/players/b3d830d8-5349-407a-bc51-59f2d15a92de.jpg"
+            },
+            {
+                "id": "96b0aa6a-d886-4c50-a968-63e5ec31ed0d",
+                "name": "Akash Deep",
+                "role": "Bowler",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm medium",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/icon512.png"
+            },
+            {
+                "id": "abe58090-e933-4888-8538-64f4611ee259",
+                "name": "Cameron Green",
+                "role": "Batting Allrounder",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm medium",
+                "country": "Australia",
+                "playerImg": "https://h.cricapi.com/img/players/abe58090-e933-4888-8538-64f4611ee259.jpg"
+            },
+            {
+                "id": "88215ee9-ca67-48af-a3f0-6b38718bd830",
+                "name": "Rajat Patidar",
+                "role": "Batsman",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm offbreak",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/icon512.png"
+            },
+            {
+                "id": "863fd5b5-b77f-4168-b514-79a88641c553",
+                "name": "Anuj Rawat",
+                "role": "WK-Batsman",
+                "battingStyle": "Left Handed Bat",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/players/863fd5b5-b77f-4168-b514-79a88641c553.jpg"
+            },
+            {
+                "id": "cb665f43-1f13-4ae8-acd9-8695ea5fbf9f",
+                "name": "Karn Sharma",
+                "role": "Bowler",
+                "battingStyle": "Left Handed Bat",
+                "bowlingStyle": "Right-arm legbreak",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/players/cb665f43-1f13-4ae8-acd9-8695ea5fbf9f.jpg"
+            },
+            {
+                "id": "41f91a34-8989-4b88-96b9-9fbbe725776f",
+                "name": "Swapnil Singh",
+                "role": "Bowling Allrounder",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Left-arm orthodox",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/icon512.png"
+            },
+            {
+                "id": "7e9dc8b1-c44c-44f1-8663-cc42bad7709b",
+                "name": "Reece Topley",
+                "role": "Bowler",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Left-arm fast-medium",
+                "country": "England",
+                "playerImg": "https://h.cricapi.com/img/players/7e9dc8b1-c44c-44f1-8663-cc42bad7709b.jpg"
+            },
+            {
+                "id": "8b6ba992-5dd2-4a46-9496-dcbc0468ae75",
+                "name": "Mayank Dagar",
+                "role": "Bowler",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Left-arm orthodox",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/icon512.png"
+            },
+            {
+                "id": "e5912efa-da10-4342-981c-f5ae32794672",
+                "name": "Faf du Plessis",
+                "role": "Batsman",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm legbreak",
+                "country": "South Africa",
+                "playerImg": "https://h.cricapi.com/img/players/e5912efa-da10-4342-981c-f5ae32794672.jpg"
+            }
+        ]
+    },
+    {
+        "teamName": "Delhi Capitals",
+        "shortname": "DC",
+        "img": "https://g.cricapi.com/iapi/148-637874596301457910.png?w=48",
+        "players": [
+            {
+                "id": "3cf4bfc5-864d-4e42-b821-0bee29105210",
+                "name": "Sumit Kumar",
+                "role": "Bowling Allrounder",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm fast-medium",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/icon512.png"
+            },
+            {
+                "id": "3f32aaf6-2d91-44ad-b14a-145a55ab5b3d",
+                "name": "Jhye Richardson",
+                "role": "Bowler",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm fast",
+                "country": "Australia",
+                "playerImg": "https://h.cricapi.com/img/players/3f32aaf6-2d91-44ad-b14a-145a55ab5b3d.jpg"
+            },
+            {
+                "id": "6eaac800-13e7-4a07-8ee2-14acd04cc53f",
+                "name": "Mitchell Marsh",
+                "role": "Batting Allrounder",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm fast-medium",
+                "country": "Australia",
+                "playerImg": "https://h.cricapi.com/img/players/6eaac800-13e7-4a07-8ee2-14acd04cc53f.jpg"
+            },
+            {
+                "id": "670ae8ac-4fe9-4f0c-84ee-320b13039f34",
+                "name": "Axar Patel",
+                "role": "Bowling Allrounder",
+                "battingStyle": "Left Handed Bat",
+                "bowlingStyle": "Left-arm orthodox",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/players/670ae8ac-4fe9-4f0c-84ee-320b13039f34.jpg"
+            },
+            {
+                "id": "b9701b53-3b9e-4eda-93b1-3543809674d4",
+                "name": "Vicky Ostwal",
+                "role": "Bowler",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Left-arm orthodox",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/players/b9701b53-3b9e-4eda-93b1-3543809674d4.jpg"
+            },
+            {
+                "id": "08da6d78-2316-454b-a7f4-40479bdd9b27",
+                "name": "David Warner",
+                "role": "Batsman",
+                "battingStyle": "Left Handed Bat",
+                "bowlingStyle": "Right-arm legbreak",
+                "country": "Australia",
+                "playerImg": "https://h.cricapi.com/img/players/08da6d78-2316-454b-a7f4-40479bdd9b27.jpg"
+            },
+            {
+                "id": "8199e3da-acb4-4bac-ab02-47d7ca004ed2",
+                "name": "Abishek Porel",
+                "role": "WK-Batsman",
+                "battingStyle": "Left Handed Bat",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/icon512.png"
+            },
+            {
+                "id": "9ded3a8d-3008-40f1-a18c-483af090aab8",
+                "name": "Prithvi Shaw",
+                "role": "Batsman",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm offbreak",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/players/9ded3a8d-3008-40f1-a18c-483af090aab8.jpg"
+            },
+            {
+                "id": "87e87390-b14f-455b-8526-5eaa19735aed",
+                "name": "Harry Brook",
+                "role": "Batsman",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm medium",
+                "country": "England",
+                "playerImg": "https://h.cricapi.com/img/players/87e87390-b14f-455b-8526-5eaa19735aed.jpg"
+            },
+            {
+                "id": "0c3d24bb-a517-435f-8cc3-60e945327bb3",
+                "name": "Ishant Sharma",
+                "role": "Bowler",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm fast-medium",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/players/0c3d24bb-a517-435f-8cc3-60e945327bb3.jpg"
+            },
+            {
+                "id": "a1782393-3479-4caa-9c27-79cb87df9abc",
+                "name": "Lungi Ngidi",
+                "role": "Bowler",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm fast",
+                "country": "South Africa",
+                "playerImg": "https://h.cricapi.com/img/players/a1782393-3479-4caa-9c27-79cb87df9abc.jpg"
+            },
+            {
+                "id": "de19a93e-06df-4597-9186-7a53c1613552",
+                "name": "Tristan Stubbs",
+                "role": "WK-Batsman",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm offbreak",
+                "country": "South Africa",
+                "playerImg": "https://h.cricapi.com/img/icon512.png"
+            },
+            {
+                "id": "1e651cfb-57f1-48da-bf9d-83cbff1733d1",
+                "name": "Kuldeep Yadav",
+                "role": "Bowler",
+                "battingStyle": "Left Handed Bat",
+                "bowlingStyle": "Left-arm wrist-spin",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/players/1e651cfb-57f1-48da-bf9d-83cbff1733d1.jpg"
+            },
+            {
+                "id": "0bd7f93c-ab64-4674-a49a-865f03ca178d",
+                "name": "Yash Dhull",
+                "role": "Batsman",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm offbreak",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/players/0bd7f93c-ab64-4674-a49a-865f03ca178d.jpg"
+            },
+            {
+                "id": "116e2bfb-6a97-4221-8006-8e7da70b0715",
+                "name": "Mukesh Kumar",
+                "role": "Bowler",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm medium",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/icon512.png"
+            },
+            {
+                "id": "a8c7ce67-5862-4acb-9297-97eafd0ea3d5",
+                "name": "Anrich Nortje",
+                "role": "Bowler",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm fast",
+                "country": "South Africa",
+                "playerImg": "https://h.cricapi.com/img/players/a8c7ce67-5862-4acb-9297-97eafd0ea3d5.jpg"
+            },
+            {
+                "id": "11beb0e3-9594-4304-b770-9f65b52a5ff9",
+                "name": "Praveen Dubey",
+                "role": "Bowler",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm legbreak",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/players/11beb0e3-9594-4304-b770-9f65b52a5ff9.jpg"
+            },
+            {
+                "id": "10fb13e1-bd0a-4ddf-9d25-a49f9317b4c5",
+                "name": "Lalit Yadav",
+                "role": "Batting Allrounder",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm offbreak",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/players/10fb13e1-bd0a-4ddf-9d25-a49f9317b4c5.jpg"
+            },
+            {
+                "id": "a1f7a1f3-f19c-43d2-bcd7-b4bae22f5842",
+                "name": "Rasikh Dar Salam",
+                "role": "Bowler",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm medium",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/icon512.png"
+            },
+            {
+                "id": "8d6ec562-42ab-4822-8096-c55eaccb01db",
+                "name": "Ricky Bhui",
+                "role": "Batsman",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm legbreak",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/players/8d6ec562-42ab-4822-8096-c55eaccb01db.jpg"
+            },
+            {
+                "id": "8b30fc91-1c7d-4fc9-899c-c795614a42a9",
+                "name": "Kumar Kushagra",
+                "role": "WK-Batsman",
+                "battingStyle": "Right Handed Bat",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/icon512.png"
+            },
+            {
+                "id": "011e6cfa-3ada-433f-85e8-d50eaa415736",
+                "name": "Swastik Chikara",
+                "role": "Batting Allrounder",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm offbreak",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/icon512.png"
+            },
+            {
+                "id": "e5790c27-c428-4de8-82f7-d69a5452923e",
+                "name": "Shai Hope",
+                "role": "WK-Batsman",
+                "battingStyle": "Right Handed Bat",
+                "country": "West Indies",
+                "playerImg": "https://h.cricapi.com/img/players/e5790c27-c428-4de8-82f7-d69a5452923e.jpg"
+            },
+            {
+                "id": "8df6183b-1c95-46d2-85c0-e185792d03f1",
+                "name": "Khaleel Ahmed",
+                "role": "Bowler",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Left-arm fast-medium",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/players/8df6183b-1c95-46d2-85c0-e185792d03f1.jpg"
+            }
+        ]
+    },
+    {
+        "teamName": "Mumbai Indians",
+        "shortname": "MI",
+        "img": "https://g.cricapi.com/iapi/226-637852956375593901.png?w=48",
+        "players": [
+            {
+                "id": "03bda674-3916-4d64-952e-00a6c19c01e1",
+                "name": "Rohit Sharma",
+                "role": "Batsman",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm offbreak",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/players/03bda674-3916-4d64-952e-00a6c19c01e1.jpg"
+            },
+            {
+                "id": "37934643-4b66-4878-83e8-06e836515b31",
+                "name": "Dilshan Madushanka",
+                "role": "Bowler",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Left-arm fast-medium",
+                "country": "Sri Lanka",
+                "playerImg": "https://h.cricapi.com/img/icon512.png"
+            },
+            {
+                "id": "e08d06c3-c7ef-4f44-9152-07023efb020c",
+                "name": "Vishnu Vinod",
+                "role": "WK-Batsman",
+                "battingStyle": "Right Handed Bat",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/icon512.png"
+            },
+            {
+                "id": "f236dae0-e7df-4084-a9b1-1bc3c7793f60",
+                "name": "Piyush Chawla",
+                "role": "Bowler",
+                "battingStyle": "Left Handed Bat",
+                "bowlingStyle": "Right-arm legbreak",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/players/f236dae0-e7df-4084-a9b1-1bc3c7793f60.jpg"
+            },
+            {
+                "id": "9713a0a1-b885-4221-9812-23b0b73c6657",
+                "name": "Nehal Wadhera",
+                "role": "Batsman",
+                "battingStyle": "Left Handed Bat",
+                "bowlingStyle": "Right-arm legbreak",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/icon512.png"
+            },
+            {
+                "id": "b65be7fe-33cd-41d1-b601-31f25b4f72a4",
+                "name": "Shreyas Gopal",
+                "role": "Bowling Allrounder",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm legbreak",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/players/b65be7fe-33cd-41d1-b601-31f25b4f72a4.jpg"
+            },
+            {
+                "id": "aefd9074-da5a-408d-94f1-3be0e79d3b82",
+                "name": "Tilak Varma",
+                "role": "Batsman",
+                "battingStyle": "Left Handed Bat",
+                "bowlingStyle": "Right-arm offbreak",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/players/aefd9074-da5a-408d-94f1-3be0e79d3b82.jpg"
+            },
+            {
+                "id": "7fd4fa20-bc49-4337-ae8a-540b67cb011d",
+                "name": "Romario Shepherd",
+                "role": "Bowler",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm fast-medium",
+                "country": "West Indies",
+                "playerImg": "https://h.cricapi.com/img/players/7fd4fa20-bc49-4337-ae8a-540b67cb011d.jpg"
+            },
+            {
+                "id": "6ff54380-820f-48d1-bee7-58378d9e8138",
+                "name": "Shams Mulani",
+                "role": "Batting Allrounder",
+                "battingStyle": "Left Handed Bat",
+                "bowlingStyle": "Left-arm orthodox",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/icon512.png"
+            },
+            {
+                "id": "cbe808da-727a-4d9c-b3be-6eb431217483",
+                "name": "Anshul Kamboj",
+                "role": "Bowler",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm fast-medium",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/icon512.png"
+            },
+            {
+                "id": "69718248-2a3a-45d4-9a2a-6f4dfc6942a5",
+                "name": "Tim David",
+                "role": "Batsman",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm medium",
+                "country": "Australia",
+                "playerImg": "https://h.cricapi.com/img/players/69718248-2a3a-45d4-9a2a-6f4dfc6942a5.jpg"
+            },
+            {
+                "id": "c702d147-7fb6-4f2a-94a8-743f342d1b9f",
+                "name": "Shivalik Sharma",
+                "role": "Batsman",
+                "battingStyle": "Left Handed Bat",
+                "bowlingStyle": "Right-arm legbreak",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/icon512.png"
+            },
+            {
+                "id": "8823100c-e5d1-4dcb-aae3-8c37561fd9f7",
+                "name": "Kumar Kartikeya",
+                "role": "Bowling Allrounder",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Left-arm wrist-spin",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/icon512.png"
+            },
+            {
+                "id": "d22f24dc-3918-4311-8d03-985f2e9ee09c",
+                "name": "Jason Behrendorff",
+                "role": "Bowler",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Left-arm fast-medium",
+                "country": "Australia",
+                "playerImg": "https://h.cricapi.com/img/players/d22f24dc-3918-4311-8d03-985f2e9ee09c.jpg"
+            },
+            {
+                "id": "a90b2371-5c53-4c29-a382-9b52d40a7548",
+                "name": "Hardik Pandya",
+                "role": "Batting Allrounder",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm fast-medium",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/players/a90b2371-5c53-4c29-a382-9b52d40a7548.jpg"
+            },
+            {
+                "id": "14a56d48-499a-4b03-aa0f-bd3f592e9d94",
+                "name": "Dewald Brevis",
+                "role": "Batsman",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm legbreak",
+                "country": "South Africa",
+                "playerImg": "https://h.cricapi.com/img/players/14a56d48-499a-4b03-aa0f-bd3f592e9d94.jpg"
+            },
+            {
+                "id": "14a39be7-af93-4431-8f96-c5d78bf616e9",
+                "name": "Akash Madhwal",
+                "role": "Bowler",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm fast-medium",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/icon512.png"
+            },
+            {
+                "id": "6ceed869-d2b7-4707-b6fd-cb84419cda12",
+                "name": "Arjun Tendulkar",
+                "role": "Bowling Allrounder",
+                "battingStyle": "Left Handed Bat",
+                "bowlingStyle": "Left-arm fast-medium",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/players/6ceed869-d2b7-4707-b6fd-cb84419cda12.jpg"
+            },
+            {
+                "id": "71add5ac-55f9-4eb7-9e0c-d51208ae20c0",
+                "name": "Naman Dhir",
+                "role": "Batsman",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm offbreak",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/icon512.png"
+            },
+            {
+                "id": "8c579447-bfbd-4cf6-a283-db4dc1d5ac33",
+                "name": "Suryakumar Yadav",
+                "role": "Batsman",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm offbreak",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/players/8c579447-bfbd-4cf6-a283-db4dc1d5ac33.jpg"
+            },
+            {
+                "id": "dd632169-52e3-4327-830e-dc5a9d18faa5",
+                "name": "Gerald Coetzee",
+                "role": "Bowler",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm fast",
+                "country": "South Africa",
+                "playerImg": "https://h.cricapi.com/img/players/dd632169-52e3-4327-830e-dc5a9d18faa5.jpg"
+            },
+            {
+                "id": "6602d875-cf56-46a3-866c-de80aaa006bc",
+                "name": "Jasprit Bumrah",
+                "role": "Bowler",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm fast",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/players/6602d875-cf56-46a3-866c-de80aaa006bc.jpg"
+            },
+            {
+                "id": "9ae68636-48d9-488f-8adc-e62a19815d85",
+                "name": "Ishan Kishan",
+                "role": "WK-Batsman",
+                "battingStyle": "Left Handed Bat",
+                "country": "India",
+                "playerImg": "https://h.cricapi.com/img/players/9ae68636-48d9-488f-8adc-e62a19815d85.jpg"
+            },
+            {
+                "id": "eb911b3b-10b3-40f8-9294-e63ba030af83",
+                "name": "Nuwan Thushara",
+                "role": "Bowler",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm fast-medium",
+                "country": "Sri Lanka",
+                "playerImg": "https://h.cricapi.com/img/players/eb911b3b-10b3-40f8-9294-e63ba030af83.jpg"
+            },
+            {
+                "id": "e4e9ba08-61cf-45d7-90cd-ec7c1a1b3ff2",
+                "name": "Mohammad Nabi",
+                "role": "Bowling Allrounder",
+                "battingStyle": "Right Handed Bat",
+                "bowlingStyle": "Right-arm offbreak",
+                "country": "Afghanistan",
+                "playerImg": "https://h.cricapi.com/img/players/e4e9ba08-61cf-45d7-90cd-ec7c1a1b3ff2.jpg"
+            }
+        ]
+    }
+]
