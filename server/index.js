@@ -39,28 +39,8 @@ app.use(
   cors({
     origin: true,
     credentials: true,
-    exposedHeaders: ["Access-Control-Allow-Origin"], // This will expose the header to the client
   })
 );
-app.use((req, res, next) => {
-  if (req.method === "OPTIONS") {
-    res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
-    res.header("Access-Control-Allow-Headers", "Content-Type, Authorization");
-    res.status(200).send();
-  } else {
-    next();
-  }
-});
-app.use(function (req, res, next) {
-  res.setHeader("Access-Control-Allow-Origin", "https://amsfront.javra.com");
-  res.setHeader(
-    "Access-Control-Allow-Methods",
-    "GET, POST, OPTIONS, PUT, DELETE"
-  );
-  res.setHeader("Access-Control-Allow-Headers", "Content-Type");
-  res.setHeader("Access-Control-Allow-Credentials", "true");
-  next();
-});
 
 //Setting UP Multer for image
 app.use(morgan(":method :url :status :response-time"));
