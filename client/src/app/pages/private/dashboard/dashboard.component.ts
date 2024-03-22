@@ -19,6 +19,10 @@ export class DashboardComponent implements OnInit {
   joinClicked = false;
   tournamentId = '';
   selectedTournament = '';
+  balance!: number;
+  allUsers: any;
+  statements: any;
+  amount = 0;
 
   constructor(
     private authService: AuthService,
@@ -32,6 +36,17 @@ export class DashboardComponent implements OnInit {
   ngOnInit(): void {
     this.getAllSeries();
     this.getAllTournaments();
+    this.getBalanceById();
+    this.getAllUsers();
+  }
+
+  getBalanceById(email?: string) {
+    this.matchService
+      .getBalanceById(email ?? this.currentUser.email)
+      .subscribe((res) => {
+        this.balance = res.data.balance;
+        this.statements = res.data.statements;
+      });
   }
 
   logout() {
@@ -101,5 +116,32 @@ export class DashboardComponent implements OnInit {
         queryParams: { tournamentId: tournament.tournamentId },
       });
     }
+  }
+
+  getAllUsers() {
+    this.matchService.getAllUsers().subscribe((res) => {
+      this.allUsers = res.data;
+    });
+  }
+
+  userBalance(email: string) {
+    this.matchService
+      .getBalanceById(email ?? this.currentUser.email)
+      .subscribe((res) => {
+        return res.data.balance;
+      });
+  }
+
+  updateBalance(balance: number, email: string, action: string) {
+    this.matchService
+      .addDeductBalance({
+        email,
+        balance,
+        action,
+        remarks: 'admin',
+      })
+      .subscribe((res) => {
+        this.getAllUsers();
+      });
   }
 }

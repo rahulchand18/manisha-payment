@@ -54,8 +54,12 @@ export class MatchService {
   updateActiveStatus(id: string, active: boolean): Observable<any> {
     return this.http.put(`/updateActiveStatus/${id}`, { active });
   }
-  updateCompleteStatus(id: string, history: boolean): Observable<any> {
-    return this.http.put(`/updateCompleteStatus/${id}`, { history });
+  updateCompleteStatus(
+    id: string,
+    history: boolean,
+    matchId: string
+  ): Observable<any> {
+    return this.http.put(`/updateCompleteStatus/${id}`, { history, matchId });
   }
   getPrediction(matchId: string, email: string): Observable<any> {
     return this.http.get(`/getPrediction/${matchId}/${email}`);
@@ -77,5 +81,14 @@ export class MatchService {
   }
   getAllPredictions(matchId: string): Observable<any> {
     return this.http.get(`/getAllPredictions/${matchId}`);
+  }
+  getBalanceById(email: string): Observable<any> {
+    return this.http.get(`/getBalanceById/${email}`);
+  }
+  getAllUsers(): Observable<any> {
+    return this.http.get(`/getAllUsers`);
+  }
+  addDeductBalance(body: any): Observable<any> {
+    return this.http.post(`/addDeductBalance/`, body);
   }
 }

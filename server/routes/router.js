@@ -78,6 +78,9 @@ router.put("/updatePrediction", mainController.updatePrediction);
 router.put("/calculate/:matchId", mainController.calculatePoints);
 router.get("/getPointsTable/:matchId", mainController.getPointsTable);
 router.get("/getAllPredictions/:matchId", mainController.getAllPredictions);
+router.get("/getBalanceById/:email", mainController.getBalanceById);
+router.post("/addDeductBalance", mainController.addDeductBalance);
+router.get("/getAllUsers", mainController.getAllUsers);
 // router.post('/upload',uploadController)
 
 module.exports = router;

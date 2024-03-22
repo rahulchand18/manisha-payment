@@ -177,10 +177,12 @@ export class TournamentConfigurationComponent implements OnInit {
     });
   }
 
-  updateCompleteStatus(id: string, history: boolean) {
-    this.matchService.updateCompleteStatus(id, history).subscribe(() => {
-      this.getAllSeries();
-    });
+  updateCompleteStatus(id: string, history: boolean, matchId: string) {
+    this.matchService
+      .updateCompleteStatus(id, history, matchId)
+      .subscribe(() => {
+        this.getAllSeries();
+      });
   }
 
   calculate(matchId: string) {

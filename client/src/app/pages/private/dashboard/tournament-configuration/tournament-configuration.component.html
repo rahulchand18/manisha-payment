@@ -153,7 +153,8 @@
                     <button mat-button color="primary"
                         (click)="updateActiveStatus(match._id, !match.active)">{{match.active?'Deactivate':'Activate'}}</button>
                     <button mat-button color="primary" (click)="calculate(match.id)">Calculate</button>
-                    <button mat-button color="primary" (click)="updateCompleteStatus(match._id,!match.history)"
+                    <button mat-button color="primary"
+                        (click)="updateCompleteStatus(match._id,!match.history,match.id )"
                         *ngIf="!match.history">Complete</button>
                 </div>
             </div>

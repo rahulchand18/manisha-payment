@@ -6,6 +6,8 @@ const Teams = require("../models/team.model");
 const PredictionModel = require("../models/prediction.model");
 const PointsTable = require("../models/points-table.model");
 const User = require("../models/user");
+const BalanceModel = require("../models/balance.model");
+const StatementModel = require("../models/statement.model");
 const getAllSeries = async (req, res) => {
   try {
     const { history } = req.query;
@@ -45,7 +47,6 @@ const updateMatch = async (req, res) => {
   try {
     const _id = req.params.id;
     const { updatedData } = req.body;
-    console.log(updatedData);
     const updatedResponse = await Match.findOneAndUpdate(
       { _id },
       { $set: updatedData }
@@ -87,7 +88,6 @@ const getAllTournaments = async (req, res) => {
   try {
     const { type, email } = req.params;
     let query;
-    console.log(type);
     if (type === "myCreated") {
       query = [
         {
@@ -131,7 +131,6 @@ const joinTournament = async (req, res) => {
       { $unwind: "$players" },
       { $match: { "players.email": email } },
     ]);
-    console.log(tournamentJoined);
     if (tournamentJoined && tournamentJoined.length) {
       return res
         .status(405)
@@ -237,18 +236,96 @@ const updateActiveStatus = async (req, res) => {
 const updateCompleteStatus = async (req, res) => {
   try {
     const { id } = req.params;
-    const { history } = req.body;
-    console.log(history);
+    const { history, matchId } = req.body;
     const updated = await Match.findOneAndUpdate(
       { _id: id },
       { $set: { history } }
     );
-    console.log(updated);
+    await calculateBalance(matchId);
     return res.send(updated);
   } catch (error) {
+    console.log(error);
     return res.status(500).send(error);
   }
 };
+
+async function calculateBalance(matchId) {
+  const matchWinner = await PointsTable.find({ matchId }).sort({
+    total: -1,
+    createdAt: 1,
+  });
+  const totalBalance = matchWinner.length * 10;
+  const { first, second, third } = balanceBreakdown(totalBalance);
+  for (const player of matchWinner) {
+    if (player.email === matchWinner[0].email) {
+      await updateBalanceByUser(player.email, first, "added", matchId);
+    } else if (player.email === matchWinner[1].email) {
+      await updateBalanceByUser(
+        player.email,
+        second ?? 10,
+        second ? "added" : "deducted",
+        matchId
+      );
+    } else if (player.email === matchWinner[3].email) {
+      await updateBalanceByUser(
+        player.email,
+        third ?? 10,
+        third ? "added" : "deducted",
+        matchId
+      );
+    } else {
+      await updateBalanceByUser(player.email, 10, "deducted", matchId);
+    }
+  }
+}
+
+function balanceBreakdown(total) {
+  let returnObj = {};
+  switch (total) {
+    case 40:
+      returnObj = { first: 40, second: 0, third: 0 };
+      break;
+    case 50:
+      returnObj = { first: 40, second: 10, third: 0 };
+      break;
+    case 60:
+      returnObj = { first: 50, second: 10, third: 0 };
+      break;
+
+    case 70:
+      returnObj = { first: 50, second: 20, third: 0 };
+      break;
+
+    case 80:
+      returnObj = { first: 50, second: 20, third: 10 };
+      break;
+
+    case 90:
+      returnObj = { first: 60, second: 20, third: 10 };
+      break;
+
+    case 100:
+      returnObj = { first: 60, second: 30, third: 10 };
+      break;
+
+    case 110:
+      returnObj = { first: 70, second: 30, third: 10 };
+      break;
+
+    case 120:
+      returnObj = { first: 80, second: 30, third: 10 };
+      break;
+
+    case 130:
+      returnObj = { first: 80, second: 40, third: 10 };
+      break;
+
+    case 140:
+      returnObj = { first: 90, second: 40, third: 10 };
+      break;
+  }
+  return returnObj;
+}
 
 const getPrediction = async (req, res) => {
   try {
@@ -354,7 +431,6 @@ const calculatePoints = async (req, res) => {
           tableDocument.mostSixes +
           tableDocument.mostWickets +
           tableDocument.tossWinner;
-        console.log(existingCalculation);
         if (!existingCalculation) {
           await PointsTable.create(tableDocument);
         } else {
@@ -374,7 +450,10 @@ const calculatePoints = async (req, res) => {
 const getPointsTable = async (req, res) => {
   try {
     const { matchId } = req.params;
-    const points = await PointsTable.find({ matchId }).sort({ total: -1 });
+    const points = await PointsTable.find({ matchId }).sort({
+      total: -1,
+      createdAt: 1,
+    });
     if (points && points.length) {
       const players = [];
       for (const player of points) {
@@ -415,6 +494,93 @@ const getAllPredictions = async (req, res) => {
   }
 };
 
+const getBalanceById = async (req, res) => {
+  try {
+    const { email } = req.params;
+    const balance = await BalanceModel.findOne({ email });
+    const statements = await StatementModel.aggregate([
+      {
+        $match: { email },
+      },
+      {
+        $sort: { date: 1 },
+      },
+    ]);
+    const data = {
+      balance: balance?.balance ?? 0,
+      statements,
+    };
+    return res.status(200).send({ data });
+  } catch (error) {
+    return res.status(500).send(error);
+  }
+};
+
+async function updateBalanceByUser(email, balance, action, remarks) {
+  balance = balance == 0 ? 10 : balance;
+  let updateQuery = {};
+  if (action === "added") {
+    updateQuery = { $inc: { balance: balance } };
+  } else {
+    updateQuery = { $inc: { balance: -balance } };
+  }
+  await StatementModel.create({
+    email,
+    balance,
+    action,
+    remarks,
+    date: new Date(),
+  });
+  const existingBalance = await BalanceModel.findOne({ email });
+  if (existingBalance) {
+    return await BalanceModel.updateOne({ email }, updateQuery);
+  } else {
+    return await BalanceModel.create({
+      email,
+      balance,
+    });
+  }
+}
+
+const addDeductBalance = async (req, res) => {
+  try {
+    const { email, balance, action, remarks } = req.body;
+    const updateResponse = await updateBalanceByUser(
+      email,
+      balance,
+      action,
+      remarks
+    );
+
+    if (updateResponse) {
+      return res.status(200).send({ message: "Done" });
+    } else {
+      return res.status(409).json({ message: "Something went wrong" });
+    }
+  } catch (error) {
+    return res.status(500).send(error);
+  }
+};
+
+const getAllUsers = async (req, res) => {
+  try {
+    const users = await User.find();
+    const data = [];
+    for (const user of users) {
+      let balance = await BalanceModel.findOne({ email: user.email });
+
+      data.push({
+        fullName: user.firstName + "  " + user.lastName,
+        balance: balance ? balance.balance : 0,
+        email: user.email,
+      });
+    }
+    return res.status(200).send({ data });
+  } catch (error) {
+    return res.status(500).send(error);
+  }
+};
+
 const mainController = {
   getAllSeries,
   createMatch,
@@ -435,6 +601,9 @@ const mainController = {
   getPointsTable,
   getAllPredictions,
   updateCompleteStatus,
+  getBalanceById,
+  addDeductBalance,
+  getAllUsers,
 };
 
 module.exports = mainController;
