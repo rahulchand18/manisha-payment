@@ -4,27 +4,27 @@ services:
         container_name: ipl-api
         build: .
         environment:
-            - MONGO_HOST=hrm-db
-            - COMPOSE_PROJECT_NAME=hrm
+            - MONGO_HOST=amss-db
+            - COMPOSE_PROJECT_NAME=ipl
         ports:
-            - 3000
+            - 3000:3000
         
         depends_on:
-            - hrm-db
+            - amss-db
         networks:
             - hrm_network
         restart: unless-stopped
         links:
-            - hrm-db
+            - amss-db
         command: npm start
 
-    hrm-db:
-        container_name: hrm-db
+    amss-db:
+        container_name: amss-db
         image: mongo:6
         volumes:
-            - ../psvolumes/hrm-db:/data/db
+            - ../psvolumes/amss-db:/data/db
         environment:
-            - COMPOSE_PROJECT_NAME=hrm
+            - COMPOSE_PROJECT_NAME=ipl
             - MONGO_INITDB_ROOT_USERNAME=
             - MONGO_INITDB_ROOT_PASSWORD=
         ports:
