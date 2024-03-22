@@ -11,6 +11,7 @@ const cors = require("cors");
 const bodyParser = require("body-parser");
 const app = express();
 const mongooseConnect = require("./db/conn");
+const morgan = require("morgan");
 // const User = require('./models/user');
 // const { editSaveController } = require('./controllers/user.controller');
 // const Uservevar http = require("http");
@@ -52,6 +53,7 @@ app.use((req, res, next) => {
 });
 
 //Setting UP Multer for image
+app.use(morgan(":method :url :status :response-time"));
 
 app.use("", router);
 
