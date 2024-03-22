@@ -344,7 +344,7 @@ const getPrediction = async (req, res) => {
 const getPlayers = async (req, res) => {
   try {
     const { matchId } = req.params;
-    const match = await Match.findOne({ matchId });
+    const match = await Match.findOne({ id: matchId });
     if (match) {
       const teams = await Teams.find({
         shortname: { $in: [match.t1, match.t2] },
@@ -381,6 +381,12 @@ const createPrediction = async (req, res) => {
 const updatePrediction = async (req, res) => {
   try {
     const { matchId, email, ...restData } = req.body;
+    const isMatchActive = await Match.findOne({ id: matchId, active: true });
+    if (!isMatchActive) {
+      return res
+        .status(403)
+        .json({ message: "The match has been deactivated." });
+    }
     const updateResponse = await PredictionModel.updateOne(
       { matchId, email },
       { $set: restData }
@@ -399,7 +405,7 @@ const calculatePoints = async (req, res) => {
   try {
     const { matchId } = req.params;
     let predictions = await PredictionModel.find({ matchId });
-    const match = await Match.findOne({ matchId });
+    const match = await Match.findOne({ id: matchId });
     if (predictions && predictions.length) {
       for (const prediction of predictions) {
         const existingCalculation = await PointsTable.findOne({

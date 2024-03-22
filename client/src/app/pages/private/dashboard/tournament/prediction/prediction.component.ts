@@ -87,14 +87,24 @@ export class PredictionComponent implements OnInit {
   savePrediction({ valid, value }: FormGroup) {
     if (valid) {
       if (!this.prediction) {
-        this.matchService.createPrediction(value).subscribe((res) => {
-          this.snackbar.open('Prediction Added Successfully', 'Close');
-          this.getPrediction();
+        this.matchService.createPrediction(value).subscribe({
+          next: (res) => {
+            this.snackbar.open('Prediction Added Successfully', 'Close');
+            this.getPrediction();
+          },
+          error: (err) => {
+            this.snackbar.open(err.message, 'Close');
+          },
         });
       } else {
-        this.matchService.updatePrediction(value).subscribe((res) => {
-          this.snackbar.open('Prediction Updated Successfully', 'Close');
-          this.getPrediction();
+        this.matchService.updatePrediction(value).subscribe({
+          next: (res) => {
+            this.snackbar.open('Prediction Updated Successfully', 'Close');
+            this.getPrediction();
+          },
+          error: (err) => {
+            this.snackbar.open(err.message, 'Close');
+          },
         });
       }
     }
