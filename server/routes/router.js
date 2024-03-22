@@ -31,9 +31,7 @@ router.get("/", (req, res) => {
     // res.json({
     //     message:"Home Page"}
     //     )
-    res.sendFile(
-      "/home/rahul18/Desktop/Mynew/login-register/client/src/index.html"
-    );
+    res.send("Welcome to backend");
 
     // res.send("Home Page loaded successfully!!");
   }

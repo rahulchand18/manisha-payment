@@ -16,4 +16,4 @@ FROM nginx:latest
 
 COPY nginx/default.conf /etc/nginx/conf.d/default.conf
 
-COPY --from=builder /usr/local/app/frontend/dist/ams-frontend/ /usr/share/nginx/html
+COPY --from=builder /usr/local/app/frontend/dist/client/ /usr/share/nginx/html

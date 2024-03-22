@@ -4,8 +4,8 @@
 
 export const environment = {
   production: true,
-  apiURL: 'https://amsback.javra.com:3000',
-  baseUrl: 'https://amsback.javra.com:3000',
+  apiURL: 'https://amsback.javra.com',
+  baseUrl: 'https://amsback.javra.com',
 };
 
 /*
