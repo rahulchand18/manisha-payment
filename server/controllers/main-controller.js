@@ -262,15 +262,15 @@ async function calculateBalance(matchId) {
     } else if (player.email === matchWinner[1].email) {
       await updateBalanceByUser(
         player.email,
-        second ?? 10,
-        second ? "added" : "deducted",
+        second,
+        Math.sign(second) === 1 ? "added" : "deducted",
         matchId
       );
     } else if (player.email === matchWinner[2].email) {
       await updateBalanceByUser(
         player.email,
-        third ?? 10,
-        third ? "added" : "deducted",
+        third,
+        Math.sign(third) === 1 ? "added" : "deducted",
         matchId
       );
     } else {
@@ -283,45 +283,45 @@ function balanceBreakdown(total) {
   let returnObj = {};
   switch (total) {
     case 40:
-      returnObj = { first: 40, second: 0, third: 0 };
+      returnObj = { first: 30, second: -10, third: -10 };
       break;
     case 50:
-      returnObj = { first: 40, second: 10, third: 0 };
+      returnObj = { first: 30, second: 0, third: -0 };
       break;
     case 60:
-      returnObj = { first: 50, second: 10, third: 0 };
+      returnObj = { first: 40, second: 0, third: -10 };
       break;
 
     case 70:
-      returnObj = { first: 50, second: 20, third: 0 };
+      returnObj = { first: 40, second: 10, third: -10 };
       break;
 
     case 80:
-      returnObj = { first: 50, second: 20, third: 10 };
+      returnObj = { first: 40, second: 10, third: 0 };
       break;
 
     case 90:
-      returnObj = { first: 60, second: 20, third: 10 };
+      returnObj = { first: 50, second: 10, third: 0 };
       break;
 
     case 100:
-      returnObj = { first: 60, second: 30, third: 10 };
+      returnObj = { first: 50, second: 20, third: 0 };
       break;
 
     case 110:
-      returnObj = { first: 70, second: 30, third: 10 };
+      returnObj = { first: 60, second: 20, third: 0 };
       break;
 
     case 120:
-      returnObj = { first: 80, second: 30, third: 10 };
+      returnObj = { first: 70, second: 20, third: 0 };
       break;
 
     case 130:
-      returnObj = { first: 80, second: 40, third: 10 };
+      returnObj = { first: 70, second: 30, third: 0 };
       break;
 
     case 140:
-      returnObj = { first: 90, second: 40, third: 10 };
+      returnObj = { first: 80, second: 30, third: 0 };
       break;
   }
   return returnObj;
@@ -523,28 +523,29 @@ const getBalanceById = async (req, res) => {
 };
 
 async function updateBalanceByUser(email, balance, action, remarks) {
-  balance = balance == 0 ? 10 : balance;
-  let updateQuery = {};
-  if (action === "added") {
-    updateQuery = { $inc: { balance: balance } };
-  } else {
-    updateQuery = { $inc: { balance: -balance } };
-  }
-  await StatementModel.create({
-    email,
-    balance,
-    action,
-    remarks,
-    date: new Date(),
-  });
-  const existingBalance = await BalanceModel.findOne({ email });
-  if (existingBalance) {
-    return await BalanceModel.updateOne({ email }, updateQuery);
-  } else {
-    return await BalanceModel.create({
+  if (balance) {
+    let updateQuery = {};
+    if (action === "added") {
+      updateQuery = { $inc: { balance: balance } };
+    } else {
+      updateQuery = { $inc: { balance: -balance } };
+    }
+    await StatementModel.create({
       email,
       balance,
+      action,
+      remarks,
+      date: new Date(),
     });
+    const existingBalance = await BalanceModel.findOne({ email });
+    if (existingBalance) {
+      return await BalanceModel.updateOne({ email }, updateQuery);
+    } else {
+      return await BalanceModel.create({
+        email,
+        balance,
+      });
+    }
   }
 }
 
