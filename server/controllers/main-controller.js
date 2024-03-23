@@ -266,7 +266,7 @@ async function calculateBalance(matchId) {
         second ? "added" : "deducted",
         matchId
       );
-    } else if (player.email === matchWinner[3].email) {
+    } else if (player.email === matchWinner[2].email) {
       await updateBalanceByUser(
         player.email,
         third ?? 10,
