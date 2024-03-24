@@ -424,7 +424,7 @@ const calculatePoints = async (req, res) => {
             ? 2
             : 0,
           mostRuns: match.mostRuns?.includes(prediction.mostRuns) ? 2 : 0,
-          mostWickets: match.mostWickets?.includes(prediction.mostCatches)
+          mostWickets: match.mostWickets?.includes(prediction.mostWickets)
             ? 2
             : 0,
           mostSixes: match.mostSixes?.includes(prediction.mostSixes) ? 3 : 0,
