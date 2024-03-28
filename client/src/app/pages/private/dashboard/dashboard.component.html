@@ -81,9 +81,9 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let statement of statements; let i=index">
-        <td>{{i+1}}</td>
-        <td>Rs.{{statement.balance}} {{statement.action}} Remarks: {{statement.remarks}}</td>
+      <tr *ngFor="let statement of statements; let i=index" >
+        <td >{{i+1}}</td>
+        <td > <span [ngClass]="{'text-danger':statement.action==='deducted','text-success':statement.action==='added'}"> Rs.{{statement.balance}} {{statement.action}}</span> Remarks: {{statement.remarks}}</td>
         <td>{{statement.date | date:'hh:mm a dd MMMM, yyyy'}}</td>
       </tr>
     </tbody>

@@ -519,7 +519,7 @@ const getBalanceById = async (req, res) => {
         $match: { email },
       },
       {
-        $sort: { date: 1 },
+        $sort: { date: -1 },
       },
     ]);
     const data = {
