@@ -23,11 +23,11 @@ export class TournamentComponent {
     });
   }
   ngOnInit(): void {
-    this.getAllSeries();
+    this.getAllSeries(false);
   }
 
-  getAllSeries() {
-    this.matchService.getAllSeries({ history: false }).subscribe({
+  getAllSeries(history:boolean) {
+    this.matchService.getAllSeries({  history }).subscribe({
       next: (res) => {
         this.allSeries = res.data;
       },

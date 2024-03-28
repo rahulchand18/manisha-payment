@@ -20,7 +20,17 @@ const getAllSeries = async (req, res) => {
 
     const matches = await Match.find(query).sort({ date: 1 });
     if (matches && matches.length) {
-      return res.status(200).send({ data: matches });
+      const data=[]
+      for(const match of matches){
+        const t1 = await Teams.findOne({shortname:match.t1})
+        const t2 = await Teams.findOne({shortname:match.t2})
+        data.push({
+          ...match._doc,
+          t2img:t2.img,
+          t1img:t1.img,
+        })
+      }
+      return res.status(200).send({ data });
     } else {
       return res.status(500).send(false);
     }
@@ -588,6 +598,47 @@ const getAllUsers = async (req, res) => {
   }
 };
 
+const getSeasonPointsTable = async(req,res)=>{
+  try {
+    const table = await PointsTable.aggregate([
+      {
+        $group:{
+          _id:'$email',
+          total: {$sum:'$total'},
+          matches:{$sum:1}
+        }
+      } ,
+      {
+        $lookup: {
+            from: 'users',
+            localField: '_id',
+            foreignField: 'email',
+            as: 'user'
+        }
+    },
+    {
+        $unwind: '$user'
+    },
+    {
+        $project: {
+            _id: 1,
+            total: 1,
+            firstName: '$user.firstName',
+            lastName: '$user.lastName',
+            matches:1
+        }
+    },{
+      $sort:{
+        total:-1
+      }
+    }
+    ])
+    return res.status(200).send({data:table})
+  } catch (error) {
+    return res.status(500).send(error)
+  }
+}
+
 const mainController = {
   getAllSeries,
   createMatch,
@@ -611,6 +662,7 @@ const mainController = {
   getBalanceById,
   addDeductBalance,
   getAllUsers,
+  getSeasonPointsTable
 };
 
 module.exports = mainController;

@@ -91,4 +91,7 @@ export class MatchService {
   addDeductBalance(body: any): Observable<any> {
     return this.http.post(`/addDeductBalance/`, body);
   }
+  getSeasonPointsTable(): Observable<any> {
+    return this.http.get(`/getSeasonPointsTable/`);
+  }
 }

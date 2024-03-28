@@ -4,6 +4,7 @@ import { TournamentComponent } from './tournament.component';
 import { TournamentConfigurationComponent } from '../tournament-configuration/tournament-configuration.component';
 import { PredictionComponent } from './prediction/prediction.component';
 import { PointsTableComponent } from './points-table/points-table.component';
+import { SeasonPointsTableComponent } from './season-points-table/season-points-table.component';
 
 const routes: Routes = [
   {
@@ -19,6 +20,10 @@ const routes: Routes = [
       {
         path: 'points-table',
         component: PointsTableComponent,
+      },
+      {
+        path: 'season-points-table',
+        component: SeasonPointsTableComponent,
       },
     ],
   },
