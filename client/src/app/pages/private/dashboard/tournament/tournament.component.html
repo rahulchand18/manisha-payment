@@ -3,13 +3,13 @@
     @if(allSeries && allSeries.length){
 
     <div class="border p-3 d-flex match-container">
-        <div class="card p-2 cursor-pointer" *ngFor="let match of allSeries"
+        <div class="card p-2 cursor-pointer w-20" *ngFor="let match of allSeries"
             (click)="goToPrediction(match.id, match.active)">
-            @if(!match.active){
+            @if(!match.active &&!match.history){
             <div class="alert alert-danger" role="alert">
                 Match Prediction is locked!!
             </div>
-            }@else{
+            }@else if(match.active){
             <div class="alert alert-info" role="alert">
                 Match is active!!
             </div>
