@@ -15,6 +15,7 @@ export class PredictionComponent implements OnInit {
   prediction: any;
   predictionForm: any;
   teams: any;
+  match: any;
   players: any;
   constructor(
     private matchService: MatchService,
@@ -48,6 +49,11 @@ export class PredictionComponent implements OnInit {
           this.prediction = null;
         },
       });
+  }
+  getMatchByMatchId(){
+    this.matchService.getMatchByMatchId(this.matchId).subscribe((response)=>{
+       this.match = response.data
+     })
   }
   createPredictionForm() {
     this.predictionForm = this.fb.group({

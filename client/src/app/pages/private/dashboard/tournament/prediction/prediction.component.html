@@ -1,23 +1,25 @@
-<div class="container border p-4">
-    <form [formGroup]="predictionForm" (ngSubmit)="savePrediction(predictionForm)">
+@if(match && match.active){
 
-        <mat-form-field class="m-1 w-30" appearance="outline">
-            <mat-label>Toss Winner</mat-label>
-            <mat-select formControlName="tossWinner">
-                <mat-option *ngFor="let team of teams" [value]="team.shortname">
-                    <div class=" d-flex mt-2">
-                        <div class="img">
-                            <img class="circle" [src]="team.img" width="40px" alt="">
+    <div class="container border p-4">
+        <form [formGroup]="predictionForm" (ngSubmit)="savePrediction(predictionForm)">
+            
+            <mat-form-field class="m-1 w-30" appearance="outline">
+                <mat-label>Toss Winner</mat-label>
+                <mat-select formControlName="tossWinner">
+                    <mat-option *ngFor="let team of teams" [value]="team.shortname">
+                        <div class=" d-flex mt-2">
+                            <div class="img">
+                                <img class="circle" [src]="team.img" width="40px" alt="">
+                            </div>
+                            <div class="info p-1">
+                                <div>{{team.shortname}}</div>
+                            </div>
                         </div>
-                        <div class="info p-1">
-                            <div>{{team.shortname}}</div>
-                        </div>
-                    </div>
-                </mat-option>
-            </mat-select>
-        </mat-form-field>
-
-        <mat-form-field class="m-1 w-30" appearance="outline">
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+            
+            <mat-form-field class="m-1 w-30" appearance="outline">
             <mat-label>Match Winner</mat-label>
             <mat-select formControlName="matchWinner">
                 <mat-option *ngFor="let team of teams" [value]="team.shortname">
@@ -32,7 +34,7 @@
                 </mat-option>
             </mat-select>
         </mat-form-field>
-
+        
         <mat-form-field class="m-1 w-30" appearance="outline">
             <mat-label>Man of The Match</mat-label>
             <mat-select formControlName="manOfTheMatch">
@@ -49,7 +51,7 @@
                 </mat-option>
             </mat-select>
         </mat-form-field>
-
+        
         <mat-form-field class="m-1 w-30" appearance="outline">
             <mat-label>Most Runs</mat-label>
             <mat-select formControlName="mostRuns">
@@ -83,7 +85,7 @@
                 </mat-option>
             </mat-select>
         </mat-form-field>
-
+        
         <mat-form-field class="m-1 w-30" appearance="outline">
             <mat-label>Most Sixes</mat-label>
             <mat-select formControlName="mostSixes">
@@ -100,7 +102,7 @@
                 </mat-option>
             </mat-select>
         </mat-form-field>
-
+        
         <mat-form-field class="m-1 w-30" appearance="outline">
             <mat-label>Most Catches</mat-label>
             <mat-select formControlName="mostCatches">
@@ -120,3 +122,4 @@
         <button mat-flat-button color="primary">Save</button>
     </form>
 </div>
+}
