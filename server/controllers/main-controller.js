@@ -474,9 +474,14 @@ const getPointsTable = async (req, res) => {
       const players = [];
       for (const player of points) {
         const p = await User.findOne({ email: player.email });
+        const balance = await StatementModel.findOne({ email: player.email, remarks:matchId });
         players.push({
           player,
           fullName: p.firstName + " " + p.lastName,
+          balance: {
+            amount: balance?balance.balance:0,
+            action: balance?balance.action:null
+          }
         });
       }
       return res.status(200).send({ data: players });
@@ -639,6 +644,16 @@ const getSeasonPointsTable = async(req,res)=>{
   }
 }
 
+const getMatchByMatchId = async(req,res)=>{
+  try {
+    const {matchId} = req.params
+    const match = await Match.findOne({id:matchId})
+    return res.status(200).send({data:match })
+  } catch (error) {
+    return res.status(500).send(error)
+  }
+}
+
 const mainController = {
   getAllSeries,
   createMatch,
@@ -662,7 +677,8 @@ const mainController = {
   getBalanceById,
   addDeductBalance,
   getAllUsers,
-  getSeasonPointsTable
+  getSeasonPointsTable,
+  getMatchByMatchId
 };
 
 module.exports = mainController;

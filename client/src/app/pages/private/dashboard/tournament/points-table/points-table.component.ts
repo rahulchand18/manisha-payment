@@ -12,6 +12,7 @@ export class PointsTableComponent {
   matchId!: string;
 
   players: any;
+  match: any;
   predictions: any;
   constructor(
     private matchService: MatchService,
@@ -23,6 +24,7 @@ export class PointsTableComponent {
         this.matchId = params['matchId'];
         this.getPointsTable(this.matchId);
         this.getAllPredictions(this.matchId);
+        this.getMatchByMatchId();
       }
     });
   }
@@ -47,5 +49,11 @@ export class PointsTableComponent {
         this.predictions = [];
       },
     });
+  }
+
+  getMatchByMatchId(){
+    this.matchService.getMatchByMatchId(this.matchId).subscribe((response)=>{
+      this.match = response.data 
+    })
   }
 }

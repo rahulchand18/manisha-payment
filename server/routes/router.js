@@ -82,6 +82,7 @@ router.get("/getBalanceById/:email", mainController.getBalanceById);
 router.post("/addDeductBalance", mainController.addDeductBalance);
 router.get("/getAllUsers", mainController.getAllUsers);
 router.get("/getSeasonPointsTable", mainController.getSeasonPointsTable);
+router.get("/getMatchByMatchId/:matchId", mainController.getMatchByMatchId);
 // router.post('/upload',uploadController)
 
 module.exports = router;

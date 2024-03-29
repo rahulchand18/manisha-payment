@@ -94,4 +94,7 @@ export class MatchService {
   getSeasonPointsTable(): Observable<any> {
     return this.http.get(`/getSeasonPointsTable/`);
   }
+  getMatchByMatchId(matchId:string): Observable<any> {
+    return this.http.get(`/getMatchByMatchId/${matchId}`);
+  }
 }

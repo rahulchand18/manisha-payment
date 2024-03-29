@@ -6,6 +6,7 @@
             <th class="w-10">S.N.</th>
             <th>Name</th>
             <th>Points</th>
+            <th *ngIf="match && match.history">Balance</th>
         </tr>
     </thead>
     <tbody>
@@ -13,6 +14,7 @@
             <td>{{i+1}}</td>
             <td>{{player.fullName}}</td>
             <td>{{player.player.total}}</td>
+            <td *ngIf="match && match.history" [ngClass]="{'text-danger':player.balance.action==='deducted','text-success':player.balance.action==='added'}">{{player.balance.action==='deducted'?'-':'+'}}Rs.{{player.balance.amount}}</td>
         </tr>
 
     </tbody>
