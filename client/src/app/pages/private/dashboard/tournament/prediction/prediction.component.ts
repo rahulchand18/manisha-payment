@@ -31,6 +31,7 @@ export class PredictionComponent implements OnInit {
         this.getPlayers(this.matchId);
         this.createPredictionForm();
         this.getPrediction();
+        this.getMatchByMatchId()
       }
     });
   }
