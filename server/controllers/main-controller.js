@@ -272,14 +272,14 @@ async function calculateBalance(matchId) {
     } else if (player.email === matchWinner[1].email) {
       await updateBalanceByUser(
         player.email,
-        +second,
+        second,
         Math.sign(second) === 1 ? "added" : "deducted",
         matchId
       );
     } else if (player.email === matchWinner[2].email) {
       await updateBalanceByUser(
         player.email,
-        +third,
+        third,
         Math.sign(third) === 1 ? "added" : "deducted",
         matchId
       );
@@ -539,6 +539,7 @@ const getBalanceById = async (req, res) => {
 
 async function updateBalanceByUser(email, balance, action, remarks) {
   if (balance) {
+    balance = Math.abs(balance)
     let updateQuery = {};
     if (action === "added") {
       updateQuery = { $inc: { balance: balance } };
