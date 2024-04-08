@@ -8,6 +8,45 @@ const PointsTable = require("../models/points-table.model");
 const User = require("../models/user");
 const BalanceModel = require("../models/balance.model");
 const StatementModel = require("../models/statement.model");
+const cron = require("node-cron");
+
+cron.schedule("05 19 * * *", () => {
+  deactivateMatch();
+});
+
+cron.schedule("55 07 * * *", () => {
+  activateMatch();
+});
+
+const deactivateMatch = async () => {
+  try {
+    await Match.updateOne(
+      { active: true, history: false },
+      { $set: { active: false } }
+    );
+    console.log("Match Deactivated");
+  } catch (error) {
+    return res.status(500).send(err);
+  }
+};
+
+const activateMatch = async () => {
+  try {
+    const todayDate = new Date();
+
+    const matches = Match.find({ history: false });
+    for (const match of matches) {
+      const day = new Date(match.date).getDate();
+      if (day === todayDate.getDate()) {
+        await Match.updateOne({ _id: match._id }, { $set: { active: true } });
+        console.log(`Match: ${match.id} Activated`);
+      }
+    }
+  } catch (error) {
+    return res.status(500).send(err);
+  }
+};
+
 const getAllSeries = async (req, res) => {
   try {
     const { history } = req.query;
@@ -20,15 +59,15 @@ const getAllSeries = async (req, res) => {
 
     const matches = await Match.find(query).sort({ date: 1 });
     if (matches && matches.length) {
-      const data=[]
-      for(const match of matches){
-        const t1 = await Teams.findOne({shortname:match.t1})
-        const t2 = await Teams.findOne({shortname:match.t2})
+      const data = [];
+      for (const match of matches) {
+        const t1 = await Teams.findOne({ shortname: match.t1 });
+        const t2 = await Teams.findOne({ shortname: match.t2 });
         data.push({
           ...match._doc,
-          t2img:t2.img,
-          t1img:t1.img,
-        })
+          t2img: t2.img,
+          t1img: t1.img,
+        });
       }
       return res.status(200).send({ data });
     } else {
@@ -474,14 +513,17 @@ const getPointsTable = async (req, res) => {
       const players = [];
       for (const player of points) {
         const p = await User.findOne({ email: player.email });
-        const balance = await StatementModel.findOne({ email: player.email, remarks:matchId });
+        const balance = await StatementModel.findOne({
+          email: player.email,
+          remarks: matchId,
+        });
         players.push({
           player,
           fullName: p.firstName + " " + p.lastName,
           balance: {
-            amount: balance?balance.balance:0,
-            action: balance?balance.action:null
-          }
+            amount: balance ? balance.balance : 0,
+            action: balance ? balance.action : null,
+          },
         });
       }
       return res.status(200).send({ data: players });
@@ -539,7 +581,7 @@ const getBalanceById = async (req, res) => {
 
 async function updateBalanceByUser(email, balance, action, remarks) {
   if (balance) {
-    balance = Math.abs(balance)
+    balance = Math.abs(balance);
     let updateQuery = {};
     if (action === "added") {
       updateQuery = { $inc: { balance: balance } };
@@ -604,56 +646,57 @@ const getAllUsers = async (req, res) => {
   }
 };
 
-const getSeasonPointsTable = async(req,res)=>{
+const getSeasonPointsTable = async (req, res) => {
   try {
     const table = await PointsTable.aggregate([
       {
-        $group:{
-          _id:'$email',
-          total: {$sum:'$total'},
-          matches:{$sum:1}
-        }
-      } ,
+        $group: {
+          _id: "$email",
+          total: { $sum: "$total" },
+          matches: { $sum: 1 },
+        },
+      },
       {
         $lookup: {
-            from: 'users',
-            localField: '_id',
-            foreignField: 'email',
-            as: 'user'
-        }
-    },
-    {
-        $unwind: '$user'
-    },
-    {
+          from: "users",
+          localField: "_id",
+          foreignField: "email",
+          as: "user",
+        },
+      },
+      {
+        $unwind: "$user",
+      },
+      {
         $project: {
-            _id: 1,
-            total: 1,
-            firstName: '$user.firstName',
-            lastName: '$user.lastName',
-            matches:1
-        }
-    },{
-      $sort:{
-        total:-1
-      }
-    }
-    ])
-    return res.status(200).send({data:table})
+          _id: 1,
+          total: 1,
+          firstName: "$user.firstName",
+          lastName: "$user.lastName",
+          matches: 1,
+        },
+      },
+      {
+        $sort: {
+          total: -1,
+        },
+      },
+    ]);
+    return res.status(200).send({ data: table });
   } catch (error) {
-    return res.status(500).send(error)
+    return res.status(500).send(error);
   }
-}
+};
 
-const getMatchByMatchId = async(req,res)=>{
+const getMatchByMatchId = async (req, res) => {
   try {
-    const {matchId} = req.params
-    const match = await Match.findOne({id:matchId})
-    return res.status(200).send({data:match })
+    const { matchId } = req.params;
+    const match = await Match.findOne({ id: matchId });
+    return res.status(200).send({ data: match });
   } catch (error) {
-    return res.status(500).send(error)
+    return res.status(500).send(error);
   }
-}
+};
 
 const mainController = {
   getAllSeries,
@@ -679,7 +722,7 @@ const mainController = {
   addDeductBalance,
   getAllUsers,
   getSeasonPointsTable,
-  getMatchByMatchId
+  getMatchByMatchId,
 };
 
 module.exports = mainController;
