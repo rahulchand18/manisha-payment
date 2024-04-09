@@ -10,12 +10,12 @@ const BalanceModel = require("../models/balance.model");
 const StatementModel = require("../models/statement.model");
 const cron = require("node-cron");
 
-cron.schedule("15 14 * * *", () => {
+cron.schedule("20 13 * * *", () => {
   console.log("Match deactivate started.");
   deactivateMatch();
 });
 
-cron.schedule("55 07 * * *", () => {
+cron.schedule("15 02 * * *", () => {
   console.log("Match Activate Start");
   activateMatch();
 });
