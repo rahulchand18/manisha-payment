@@ -10,7 +10,7 @@ const BalanceModel = require("../models/balance.model");
 const StatementModel = require("../models/statement.model");
 const cron = require("node-cron");
 
-cron.schedule("00 20 * * *", () => {
+cron.schedule("15 14 * * *", () => {
   console.log("Match deactivate started.");
   deactivateMatch();
 });
