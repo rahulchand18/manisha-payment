@@ -11,10 +11,12 @@ const StatementModel = require("../models/statement.model");
 const cron = require("node-cron");
 
 cron.schedule("05 19 * * *", () => {
+  console.log("Match deactivate started.");
   deactivateMatch();
 });
 
 cron.schedule("55 07 * * *", () => {
+  console.log("Match Activate Start");
   activateMatch();
 });
 
@@ -26,7 +28,7 @@ const deactivateMatch = async () => {
     );
     console.log("Match Deactivated");
   } catch (error) {
-    return res.status(500).send(err);
+    console.log(error);
   }
 };
 
@@ -34,7 +36,7 @@ const activateMatch = async () => {
   try {
     const todayDate = new Date();
 
-    const matches = Match.find({ history: false });
+    const matches = await Match.find({ history: false });
     for (const match of matches) {
       const day = new Date(match.date).getDate();
       if (day === todayDate.getDate()) {
@@ -43,7 +45,7 @@ const activateMatch = async () => {
       }
     }
   } catch (error) {
-    return res.status(500).send(err);
+    console.log(error);
   }
 };
 

@@ -48,7 +48,7 @@ const corsOptions = {
 app.use(cors(corsOptions));
 
 //Setting UP Multer for image
-app.use(morgan(":method :url :status :response-time"));
+app.use(morgan(":method :url :status :response-time :date"));
 
 app.use("", router);
 
