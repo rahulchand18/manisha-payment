@@ -522,6 +522,7 @@ const getPointsTable = async (req, res) => {
         players.push({
           player,
           fullName: p.firstName + " " + p.lastName,
+          img: p.img,
           balance: {
             amount: balance ? balance.balance : 0,
             action: balance ? balance.action : null,
@@ -675,6 +676,7 @@ const getSeasonPointsTable = async (req, res) => {
           total: 1,
           firstName: "$user.firstName",
           lastName: "$user.lastName",
+          img: "$user.img",
           matches: 1,
         },
       },

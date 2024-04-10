@@ -1,18 +1,42 @@
 @if(authService.isLoggedIn){
-    <mat-toolbar>
-        <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon"></button>
-        <img src="../../../../assets/images/ipl-logo.png" height="50px" alt="" routerLink="" class="cursor-pointer"/>
-        <span> Prediction</span>
-        <span class="example-spacer"></span>
-        <div class="d-flex gap-10">
-            
-            <span class="">Balance:<b> Rs. {{balance}}</b></span>
-            <span>Welcome <b>{{ currentUser.fullName }}</b></span>
-        </div>
-        <button mat-flat-button color="primary" class="example-icon favorite-icon m-2"
-        aria-label="Example icon-button with heart icon" (click)="logout()">
-        Logout
-    </button>
+<mat-toolbar>
+  <button
+    mat-icon-button
+    class="example-icon"
+    aria-label="Example icon-button with menu icon"
+  ></button>
+  <img
+    src="../../../../assets/images/ipl-logo.png"
+    height="50px"
+    alt=""
+    routerLink=""
+    class="cursor-pointer"
+  />
+  <span> Prediction</span>
+  <span class="example-spacer"></span>
+  <div class="d-flex gap-10">
+    <span class=""
+      >Balance:<b> Rs. {{ balance }}</b></span
+    >
+    <span
+      >Welcome <b>{{ currentUser.fullName }}</b></span
+    >
+    <img
+      style="border-radius: 50%; border: 0.2px solid black"
+      [src]="currentUser.img ?? '../../../../assets/images/image.png'"
+      height="50"
+      alt="No Img"
+    />
+  </div>
+  <button
+    mat-flat-button
+    color="primary"
+    class="example-icon favorite-icon m-2"
+    aria-label="Example icon-button with heart icon"
+    (click)="logout()"
+  >
+    Logout
+  </button>
 </mat-toolbar>
 }
 <router-outlet></router-outlet>

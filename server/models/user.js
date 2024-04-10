@@ -39,7 +39,6 @@ const usrSchema = new mongoose.Schema({
   },
   img: {
     type: String,
-    default: "default.webp",
   },
 });
 
