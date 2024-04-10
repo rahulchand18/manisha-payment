@@ -5,7 +5,7 @@ import { MatchService } from './core/services/match.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
   title = 'IPL Prediction';
@@ -14,11 +14,12 @@ export class AppComponent {
 
   constructor(
     public authService: AuthService,
-    private matchService: MatchService,
+    private matchService: MatchService
   ) {
     this.currentUser = authService.getUserData();
-    if(this.currentUser){
-      this.getBalanceById(this.currentUser.email)
+    if (this.currentUser) {
+      console.log(this.currentUser);
+      this.getBalanceById(this.currentUser.email);
     }
   }
   getBalanceById(email?: string) {
