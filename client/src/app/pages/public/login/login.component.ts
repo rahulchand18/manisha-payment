@@ -46,6 +46,7 @@ export class LoginComponent {
             email: user.email,
             userType: user.userType,
             fullName: user.firstName + ' ' + user.lastName,
+            img: user.img,
           };
           this.authService.setUserData(userData);
         }
