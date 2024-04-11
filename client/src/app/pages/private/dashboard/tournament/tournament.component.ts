@@ -10,6 +10,9 @@ import { MatchService } from 'src/app/core/services/match.service';
 })
 export class TournamentComponent {
   allSeries: any;
+  loading = false;
+  viewFullList = false;
+  history = false;
   constructor(
     private route: ActivatedRoute,
     private matchService: MatchService,
@@ -26,10 +29,12 @@ export class TournamentComponent {
     this.getAllSeries(false);
   }
 
-  getAllSeries(history:boolean) {
-    this.matchService.getAllSeries({  history }).subscribe({
+  getAllSeries(history: boolean, showMore?:boolean) {
+    this.loading = true;
+    this.matchService.getAllSeries({ history, fullList: showMore }).subscribe({
       next: (res) => {
         this.allSeries = res.data;
+        this.loading = false;
       },
     });
   }

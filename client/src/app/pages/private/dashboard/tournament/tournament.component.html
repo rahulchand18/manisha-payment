@@ -2,7 +2,11 @@
     <h4>Matches</h4>
     @if(allSeries && allSeries.length){
 
-    <div class="border p-3 d-flex match-container">
+        <mat-spinner class="m-auto" *ngIf="loading"></mat-spinner>
+        @if(history){
+            <button mat-flat-button color="primary" class="m-2" (click)="getAllSeries(true, !viewFullList); viewFullList=!viewFullList" >Show {{!viewFullList?'More':'Less'}}</button>
+        }
+    <div class="border p-3 d-flex match-container" *ngIf="!loading">
         <div class="card p-2 cursor-pointer w-20" *ngFor="let match of allSeries"
             (click)="goToPrediction(match.id, match.active)">
             @if(!match.active &&!match.history){
@@ -10,20 +14,18 @@
                 Match Prediction is locked!!
             </div>
             }@else if(match.active){
-            <div class="alert alert-info" role="alert">
-                Match is active!!
-            </div>
+            <div class="alert alert-info" role="alert">Match is active!!</div>
 
             }
             <div class="d-flex justify-content-between">
-                <div class="w-10 m-2 ">
+                <div class="w-10 m-2">
                     <div class="team1 m-2 d-flex align-items-center">
                         <img class="circle" height="30px" [src]="match.t1img" alt="" />
-                        <strong>{{ match.t1 }}</strong> <b class="ml-5">{{match.t1s}}</b>
+                        <strong>{{ match.t1 }}</strong> <b class="ml-5">{{ match.t1s }}</b>
                     </div>
                     <div class="team1 m-2 d-flex align-items-center">
                         <img class="circle" height="30px" [src]="match.t2img" alt="" />
-                        <strong>{{ match.t2 }}</strong> <b class="ml-5">{{match.t2s}}</b>
+                        <strong>{{ match.t2 }}</strong> <b class="ml-5">{{ match.t2s }}</b>
                     </div>
                 </div>
                 <div class="w-10">
@@ -35,18 +37,22 @@
             </div>
         </div>
     </div>
-    <button mat-flat-button class="m-2" color="primary" (click)="getAllSeries(true)">History</button>
-    <button mat-flat-button class="m-2" color="primary" (click)="getAllSeries(false)">Current Matches</button>
-    <button mat-flat-button class="m-2" color="primary" (click)="getAllSeries(false)" routerLink="season-points-table">Season Points Table</button>
-    <button mat-flat-button class="m-2" color="primary" (click)="getAllSeries(false)" routerLink="match-results">Match Results</button>
-    }
-    @else {
-    <div class="alert alert-danger" role="alert">
-        No Active Matches available
-    </div>
+    <button mat-flat-button class="m-2" color="primary" (click)="getAllSeries(true);history=true;">
+        History
+    </button>
+    <button mat-flat-button class="m-2" color="primary" (click)="getAllSeries(false);history = false;">
+        Current Matches
+    </button>
+    <button mat-flat-button class="m-2" color="primary" (click)="getAllSeries(false);history = false;" routerLink="season-points-table">
+        Season Points Table
+    </button>
+    <button mat-flat-button class="m-2" color="primary" (click)="getAllSeries(false);history = false;" routerLink="match-results">
+        Match Results
+    </button>
+    } @else {
+    <div class="alert alert-danger" role="alert">No Active Matches available</div>
     }
 </div>
-
 
 <div class="container">
     <router-outlet></router-outlet>

@@ -51,7 +51,7 @@ const activateMatch = async () => {
 
 const getAllSeries = async (req, res) => {
   try {
-    const { history } = req.query;
+    const { history, fullList } = req.query;
     let query = {};
     if (history) {
       query = {
@@ -59,7 +59,13 @@ const getAllSeries = async (req, res) => {
       };
     }
 
-    const matches = await Match.find(query).sort({ date: 1 });
+    let matches = []
+
+    if (fullList) {
+      matches = await Match.find(query).sort({ date: 1 })
+    } else {
+      matches = await Match.find(query).sort({ date: -1 }).limit(4).sort({ date: 1 })
+    }
     if (matches && matches.length) {
       const data = [];
       for (const match of matches) {

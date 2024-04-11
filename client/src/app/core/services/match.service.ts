@@ -9,7 +9,7 @@ import { HttpService } from './http.service';
 export class MatchService {
   constructor(private http: HttpService) {}
 
-  getAllSeries(query?: { history: boolean }): Observable<any> {
+  getAllSeries(query?: { history: boolean, fullList?:boolean }): Observable<any> {
     return this.http.get('/getAllSeries', query);
   }
 
