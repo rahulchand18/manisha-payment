@@ -64,7 +64,7 @@ const getAllSeries = async (req, res) => {
     if (fullList==='true') {
       matches = await Match.find(query).sort({ date: 1 })
     } else {
-      matches = await Match.find(query).sort({ date: -1 }).limit(4)
+      matches = await Match.find(query).sort({ date: -1 }).limit(3)
     }
     if (matches && matches.length) {
       const data = [];
