@@ -8,7 +8,8 @@ services:
             - COMPOSE_PROJECT_NAME=ipl
         ports:
             - 3000:3000
-        
+        volumes:
+            - ../psvolumes/ipl/uploads:/workspace/uploads
         depends_on:
             - amss-db
         networks:
