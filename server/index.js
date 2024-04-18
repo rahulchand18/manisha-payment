@@ -35,15 +35,19 @@ app.use(
   })
 );
 const whitelist = ["https://amsfront.javra.com", "http://localhost:4200"];
+// const corsOptions = {
+//   credentials: true,
+//   origin: function (origin, callback) {
+//     if (whitelist.indexOf(origin) !== -1) {
+//       callback(null, true);
+//     } else {
+//       callback(new Error("Not allowed by CORS"));
+//     }
+//   },
+// };
 const corsOptions = {
   credentials: true,
-  origin: function (origin, callback) {
-    if (whitelist.indexOf(origin) !== -1) {
-      callback(null, true);
-    } else {
-      callback(new Error("Not allowed by CORS"));
-    }
-  },
+  origin: true,
 };
 app.use(cors(corsOptions));
 
