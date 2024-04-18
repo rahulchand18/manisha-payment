@@ -18,7 +18,7 @@
       </td>
       <td>
         <img [src]="player.img ? authService.getProfileUrl(player.img) : '../../../../../../assets/images/image.png'"
-          alt="" height="50px" style="border-radius: 50%; border: 1px solid purple" />
+          alt="" height="50px" width="50px" style="border-radius: 50%; border: 1px solid purple" />
 
         <strong> {{ player.fullName }}</strong>
         <img *ngIf="match.history && i === 0" [src]="'../../../../../../assets/images/gold.png'" height="50px" alt="" />
