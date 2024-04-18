@@ -5,6 +5,7 @@
       <th>Name</th>
       <th>Matches</th>
       <th>Points</th>
+      <th>Average</th>
     </tr>
   </thead>
   <tbody>
@@ -19,6 +20,7 @@
       </td>
       <td>{{ player.matches }}</td>
       <td>{{ player.total }}</td>
+      <td>{{ player.total/player.matches }}</td>
     </tr>
   </tbody>
 </table>
