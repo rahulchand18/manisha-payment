@@ -3,6 +3,9 @@ const router = express.Router();
 const User = require("../models/user");
 const session = require("express-session");
 const bcrypt = require("bcryptjs");
+const fs = require("fs");
+const { extname } = require("path");
+
 // var http = require("http");
 
 const {
@@ -21,6 +24,46 @@ const {
   getImageController,
 } = require("../controllers/user.controller");
 const mainController = require("../controllers/main-controller");
+const multer = require("multer");
+
+const employeeProfileStorage = multer.diskStorage({
+  destination: getEmployeeProfileDestination,
+  filename: fileName,
+});
+
+function fileName(req, file, callback) {
+  const fileExtName = extname(file.originalname);
+  const fileName = file.originalname.split(" ").join("-");
+  callback(
+    null,
+    `${fileName.substring(
+      0,
+      fileName.lastIndexOf(".")
+    )}-${Date.now()}${fileExtName}`
+  );
+}
+
+const uploadOptions = multer({ storage: employeeProfileStorage });
+
+function getEmployeeProfileDestination(req, file, callback) {
+  try {
+    const folderName = "users";
+    if (!fs.existsSync(process.cwd() + "/uploads")) {
+      fs.mkdirSync(process.cwd() + "/uploads");
+    }
+    if (!fs.existsSync(process.cwd() + `/uploads/${folderName}`)) {
+      fs.mkdirSync(process.cwd() + `/uploads/${folderName}`);
+    }
+    const path = process.cwd() + `/uploads/${folderName}`;
+    if (!fs.existsSync(path)) {
+      fs.mkdirSync(path);
+    }
+
+    callback(null, `./uploads/${folderName}`);
+  } catch (err) {
+    console.log(err);
+  }
+}
 
 router.get("/", (req, res) => {
   if (req.session.user) {
@@ -83,6 +126,18 @@ router.post("/addDeductBalance", mainController.addDeductBalance);
 router.get("/getAllUsers", mainController.getAllUsers);
 router.get("/getSeasonPointsTable", mainController.getSeasonPointsTable);
 router.get("/getMatchByMatchId/:matchId", mainController.getMatchByMatchId);
+
+router.post(
+  "/uploadPhoto/:email",
+  uploadOptions.single("image"),
+  mainController.uploadPhoto
+);
+router.get("/getImage/", async (req, res) => {
+  let { filePath } = req.query;
+  console.log(filePath);
+
+  res.status(200).sendFile(filePath, { root: `./uploads/` });
+});
 // router.post('/upload',uploadController)
 
 module.exports = router;

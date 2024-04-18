@@ -11,13 +11,9 @@
     <tr *ngFor="let player of table; let i = index">
       <td>{{ i + 1 }}</td>
       <td>
-        <img
-          class="m-2"
-          [src]="player.img ?? '../../../../../../assets/images/image.png'"
-          alt=""
-          height="50px"
-          style="border-radius: 50%; border: 1px solid purple"
-        />
+        <img class="m-2"
+          [src]="player.img ? authService.getProfileUrl(player.img) : '../../../../../../assets/images/image.png'"
+          alt="" height="50px" width="50px" style="border-radius: 50%; border: 1px solid purple" />
 
         <strong>{{ player.firstName + " " + player.lastName }}</strong>
       </td>

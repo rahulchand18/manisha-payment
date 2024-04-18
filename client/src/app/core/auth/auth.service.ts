@@ -4,6 +4,7 @@ import { NavigationBehaviorOptions, Router } from '@angular/router';
 import { LOCAL_STORAGE_CONSTANT, URL_CONSTANT } from '../constants';
 import { LocalStorageService } from '../services/local-storage.service';
 import { HttpService } from '../services/http.service';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root',
@@ -86,8 +87,16 @@ export class AuthService {
     return this.http.post<any>(URL_CONSTANT.loginUrl, user);
   }
 
+  uploadPhoto(email: any, formData: FormData): Observable<any> {
+    return this.http.post<any>('/uploadPhoto/' + email, formData, true);
+  }
+
   register(user: any): Observable<any> {
     return this.http.post<any>(URL_CONSTANT.registerUrl, user);
+  }
+
+  getProfileUrl(path: string) {
+    return `${environment.apiURL}/getImage/?filePath=${path}`;
   }
 
   get logOutStatus(): Observable<void> {

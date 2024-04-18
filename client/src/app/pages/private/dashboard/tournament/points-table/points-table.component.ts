@@ -16,7 +16,7 @@ export class PointsTableComponent {
   predictions: any;
   constructor(
     private matchService: MatchService,
-    private authService: AuthService,
+    public authService: AuthService,
     private route: ActivatedRoute
   ) {
     this.route.queryParams.subscribe((params) => {
@@ -51,9 +51,9 @@ export class PointsTableComponent {
     });
   }
 
-  getMatchByMatchId(){
-    this.matchService.getMatchByMatchId(this.matchId).subscribe((response)=>{
-      this.match = response.data 
-    })
+  getMatchByMatchId() {
+    this.matchService.getMatchByMatchId(this.matchId).subscribe((response) => {
+      this.match = response.data;
+    });
   }
 }

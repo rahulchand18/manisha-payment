@@ -17,43 +17,23 @@
         <span>{{ i + 1 }}</span>
       </td>
       <td>
-        <img
-          [src]="player.img ?? '../../../../../../assets/images/image.png'"
-          alt=""
-          height="50px"
-          style="border-radius: 50%; border: 1px solid purple"
-        />
+        <img [src]="player.img ? authService.getProfileUrl(player.img) : '../../../../../../assets/images/image.png'"
+          alt="" height="50px" style="border-radius: 50%; border: 1px solid purple" />
 
         <strong> {{ player.fullName }}</strong>
-        <img
-          *ngIf="match.history && i === 0"
-          [src]="'../../../../../../assets/images/gold.png'"
-          height="50px"
-          alt=""
-        />
-        <img
-          *ngIf="match.history && i === 1"
-          [src]="'../../../../../../assets/images/silver.png'"
-          height="50px"
-          alt=""
-        />
-        <img
-          *ngIf="match.history && i === 2"
-          [src]="'../../../../../../assets/images/bronze.png'"
-          height="50px"
-          alt=""
-        />
+        <img *ngIf="match.history && i === 0" [src]="'../../../../../../assets/images/gold.png'" height="50px" alt="" />
+        <img *ngIf="match.history && i === 1" [src]="'../../../../../../assets/images/silver.png'" height="50px"
+          alt="" />
+        <img *ngIf="match.history && i === 2" [src]="'../../../../../../assets/images/bronze.png'" height="50px"
+          alt="" />
       </td>
       <td>{{ player.player.total }}</td>
-      <td
-        *ngIf="match && match.history"
-        [ngClass]="{
+      <td *ngIf="match && match.history" [ngClass]="{
           'text-danger': player.balance.action === 'deducted',
           'text-success': player.balance.action === 'added'
-        }"
-      >
+        }">
         {{ player.balance.action === "deducted" ? "-" : "+" }}Rs.{{
-          player.balance.amount
+        player.balance.amount
         }}
       </td>
     </tr>

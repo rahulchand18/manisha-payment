@@ -59,12 +59,12 @@ const getAllSeries = async (req, res) => {
       };
     }
 
-    let matches = []
+    let matches = [];
 
-    if (fullList==='true' || history!=='true') {
-      matches = await Match.find(query).sort({ date: 1 })
+    if (fullList === "true" || history !== "true") {
+      matches = await Match.find(query).sort({ date: 1 });
     } else {
-      matches = await Match.find(query).sort({ date: -1 }).limit(3)
+      matches = await Match.find(query).sort({ date: -1 }).limit(3);
     }
     if (matches && matches.length) {
       const data = [];
@@ -708,6 +708,35 @@ const getMatchByMatchId = async (req, res) => {
   }
 };
 
+const uploadPhoto = async (req, res) => {
+  try {
+    const file = req.file;
+    const { email } = req.params;
+    if (!file) {
+      return res
+        .status(400)
+        .send({ success: false, message: "User Image is required" });
+    }
+    const fileName = file.filename;
+    const fileOriginalName = file.originalname;
+    const uploadResponse = await User.updateOne(
+      { email },
+      { $set: { img: `users/${fileName}` } }
+    );
+    if (uploadResponse) {
+      return res
+        .status(200)
+        .send({ success: true, message: "Image uploaded successfully" });
+    } else {
+      return res
+        .status(400)
+        .send({ success: false, message: "Image upload failed" });
+    }
+  } catch (error) {
+    return res.status(500).send(error);
+  }
+};
+
 const mainController = {
   getAllSeries,
   createMatch,
@@ -733,6 +762,7 @@ const mainController = {
   getAllUsers,
   getSeasonPointsTable,
   getMatchByMatchId,
+  uploadPhoto,
 };
 
 module.exports = mainController;
