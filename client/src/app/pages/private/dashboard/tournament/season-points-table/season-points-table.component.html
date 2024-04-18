@@ -20,7 +20,7 @@
       </td>
       <td>{{ player.matches }}</td>
       <td>{{ player.total }}</td>
-      <td>{{ player.total/player.matches }}</td>
+      <td>{{ (player.total/player.matches) | number:'1.2-2' }}</td>
     </tr>
   </tbody>
 </table>
