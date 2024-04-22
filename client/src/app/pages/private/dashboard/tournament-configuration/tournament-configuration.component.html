@@ -24,7 +24,7 @@
         <div class="container">
             <h3>Matches</h3>
             <button mat-flat-button color="primary"
-                (click)="createMatch = !createMatch; createMatch? createMatchForm():''">
+                (click)="createMatch = !createMatch; createMatch? createMatchForm():updateMatch= false">
                 {{!createMatch?'Add Match':'Cancel'}}
             </button>
             <div class="form border p-3" *ngIf="createMatch">
@@ -132,7 +132,7 @@
                 <div class="card w-20 p-2" *ngFor="let match of allSeries">
                     <div class="d-flex justify-content-between">
                         <button mat-button
-                            (click)=" editFormValue = match;createMatchForm(); createMatch = true; updateMatch= true; ">Edit</button>
+                            (click)=" editFormValue = match;updateMatch= true;createMatchForm(); createMatch = true;  ">Edit</button>
                         <div class="w-10 m-2">
                             <div class="team1 m-2">
                                 <img class="circle" height="30px" [src]="match.t1img" alt="" />

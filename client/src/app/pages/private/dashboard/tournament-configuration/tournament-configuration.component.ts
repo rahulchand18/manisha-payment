@@ -96,6 +96,7 @@ export class TournamentConfigurationComponent implements OnInit {
   }
 
   getAllSeries() {
+    this.updateMatch= false
     this.matchService.getAllSeries().subscribe({
       next: (res) => {
         this.allSeries = res.data;

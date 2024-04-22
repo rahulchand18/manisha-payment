@@ -2,7 +2,11 @@
     <h4>Matches</h4>
     @if(allSeries && allSeries.length){
 
-        <mat-spinner class="m-auto" *ngIf="loading"></mat-spinner>
+        <div class="overlay" *ngIf="loading">
+            <div class="spinner" >
+                <mat-spinner ></mat-spinner>
+            </div>
+        </div>
         @if(history){
             <button mat-flat-button color="primary" class="m-2" (click)="getAllSeries(true, !viewFullList); viewFullList=!viewFullList" >Show {{!viewFullList?'More':'Less'}}</button>
         }
@@ -37,7 +41,7 @@
             </div>
         </div>
     </div>
-    <button mat-flat-button class="m-2" color="primary" (click)="getAllSeries(true);history=true;">
+    <button mat-flat-button class="m-2" color="primary" [disabled]="history" (click)="getAllSeries(true);history=true;">
         History
     </button>
     <button mat-flat-button class="m-2" color="primary" (click)="getAllSeries(false);history = false;">

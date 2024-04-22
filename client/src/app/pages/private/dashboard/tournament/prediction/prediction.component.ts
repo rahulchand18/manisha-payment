@@ -17,6 +17,7 @@ export class PredictionComponent implements OnInit {
   teams: any;
   match: any;
   players: any;
+  loading = false;
   constructor(
     private matchService: MatchService,
     private authService: AuthService,
@@ -36,7 +37,7 @@ export class PredictionComponent implements OnInit {
     });
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 
   getPrediction() {
     this.matchService
@@ -51,10 +52,10 @@ export class PredictionComponent implements OnInit {
         },
       });
   }
-  getMatchByMatchId(){
-    this.matchService.getMatchByMatchId(this.matchId).subscribe((response)=>{
-       this.match = response.data
-     })
+  getMatchByMatchId() {
+    this.matchService.getMatchByMatchId(this.matchId).subscribe((response) => {
+      this.match = response.data
+    })
   }
   createPredictionForm() {
     this.predictionForm = this.fb.group({
@@ -92,15 +93,18 @@ export class PredictionComponent implements OnInit {
   }
 
   savePrediction({ valid, value }: FormGroup) {
+    this.loading = true;
     if (valid) {
       if (!this.prediction) {
         this.matchService.createPrediction(value).subscribe({
           next: (res) => {
             this.snackbar.open('Prediction Added Successfully', 'Close');
             this.getPrediction();
+            this.loading = false
           },
           error: (err) => {
             this.snackbar.open(err.message, 'Close');
+            this.loading = false
           },
         });
       } else {
@@ -108,12 +112,17 @@ export class PredictionComponent implements OnInit {
           next: (res) => {
             this.snackbar.open('Prediction Updated Successfully', 'Close');
             this.getPrediction();
+            this.loading = false
           },
           error: (err) => {
             this.snackbar.open(err.message, 'Close');
+            this.loading = false
           },
         });
       }
+    }
+    else {
+      this.loading = false
     }
   }
 }
