@@ -764,6 +764,14 @@ const getSummary = async (req, res) => {
           firstName: "$user.firstName",
           lastName: "$user.lastName",
         }
+      },
+      {
+        "$addFields": {
+          "matches_count": { "$size": "$matches" }
+        }
+      },
+      {
+        "$sort": { "matches_count": -1 }
       }
     ]);
     if (users && users.length) {
