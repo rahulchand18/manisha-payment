@@ -5,13 +5,15 @@ import { TournamentRoutingModule } from './tournament-routing.module';
 import { PointsTableComponent } from './points-table/points-table.component';
 import { SeasonPointsTableComponent } from './season-points-table/season-points-table.component';
 import { ResultsComponent } from './results/results.component';
+import { SummaryComponent } from './summary/summary.component';
 
 
 @NgModule({
   declarations: [
     PointsTableComponent,
     SeasonPointsTableComponent,
-    ResultsComponent
+    ResultsComponent,
+    SummaryComponent
   ],
   imports: [
     CommonModule,

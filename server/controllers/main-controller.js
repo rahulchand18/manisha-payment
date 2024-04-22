@@ -737,6 +737,68 @@ const uploadPhoto = async (req, res) => {
   }
 };
 
+const getSummary = async (req, res) => {
+  try {
+    const users = await PredictionModel.aggregate([
+      {
+        $group: {
+          _id: "$email",
+          matches: { $push: "$$ROOT" },
+        },
+      },
+      {
+        $lookup: {
+          from: "users",
+          localField: "_id",
+          foreignField: "email",
+          as: "user",
+        },
+      },
+      {
+        $unwind: "$user",
+      },
+      {
+        $project:{
+          _id:1,
+          matches:1,
+          firstName: "$user.firstName",
+          lastName: "$user.lastName",
+        }
+      }
+    ]);
+    if (users && users.length) {
+      for (const user of users) {
+        let finalDocument = {
+          tossWinner: 0,
+          matchWinner: 0,
+          manOfTheMatch: 0,
+          mostRuns: 0,
+          mostWickets: 0,
+          mostCatches: 0,
+          mostSixes: 0,
+        };
+        for (const prediction of user.matches) {
+          const match = await Match.findOne({ id: prediction.matchId });
+          finalDocument.tossWinner += match.tossWinner === prediction.tossWinner ? 1 : 0
+          finalDocument.matchWinner += match.matchWinner === prediction.matchWinner ? 1 : 0
+          finalDocument.manOfTheMatch += match.manOfTheMatch === prediction.manOfTheMatch ? 1 : 0
+          finalDocument.mostCatches += match.mostCatches?.includes(prediction.mostCatches) ? 1 : 0
+          finalDocument.mostRuns += match.mostRuns?.includes(prediction.mostRuns) ? 1 : 0
+          finalDocument.mostWickets += match.mostWickets?.includes(prediction.mostWickets) ? 1 : 0
+          finalDocument.mostSixes += match.mostSixes?.includes(prediction.mostSixes) ? 1 : 0
+
+        }
+        user['summary'] = finalDocument
+      }
+
+    }
+
+    return res.send({ data: users });
+  } catch (error) {
+    return res.status(500).send(error);
+  }
+};
+
 const mainController = {
   getAllSeries,
   createMatch,
@@ -763,6 +825,7 @@ const mainController = {
   getSeasonPointsTable,
   getMatchByMatchId,
   uploadPhoto,
+  getSummary,
 };
 
 module.exports = mainController;

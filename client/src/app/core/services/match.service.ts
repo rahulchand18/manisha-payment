@@ -97,4 +97,7 @@ export class MatchService {
   getMatchByMatchId(matchId:string): Observable<any> {
     return this.http.get(`/getMatchByMatchId/${matchId}`);
   }
+  getSummary(): Observable<any> {
+    return this.http.get(`/getSummary`);
+  }
 }
