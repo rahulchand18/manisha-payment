@@ -450,9 +450,10 @@ const updatePrediction = async (req, res) => {
       { $set: restData }
     );
     if (updateResponse) {
+      const fullName = await getFullNameById(email);
       await notificationModel.create({
         receiverId: "admin@gmail.com",
-        message: `${email} updated the match prediction for ${matchId}`,
+        message: `${fullName} updated the match prediction for ${matchId}`,
         sentDate: new Date(),
       });
       return res.status(200).send({ message: "Updated" });
@@ -840,6 +841,11 @@ const getNotifications = async (req, res) => {
   } catch (error) {
     return res.status(500).send(error);
   }
+};
+
+const getFullNameById = async (email) => {
+  const user = await User.findOne({ email });
+  return user?.firstName + " " + user?.lastName;
 };
 
 const mainController = {
