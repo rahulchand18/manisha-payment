@@ -23,6 +23,7 @@ export class DashboardComponent implements OnInit {
   allUsers: any;
   statements: any;
   amount = 0;
+  notifications: any = [];
 
   constructor(
     private authService: AuthService,
@@ -38,6 +39,7 @@ export class DashboardComponent implements OnInit {
     this.getAllTournaments();
     this.getBalanceById();
     this.getAllUsers();
+    this.getNotifications();
   }
 
   getBalanceById(email?: string) {
@@ -142,6 +144,13 @@ export class DashboardComponent implements OnInit {
       })
       .subscribe((res) => {
         this.getAllUsers();
+      });
+  }
+  getNotifications() {
+    this.matchService
+      .getNotifications(this.currentUser.email)
+      .subscribe((res) => {
+        this.notifications = res.data;
       });
   }
 }

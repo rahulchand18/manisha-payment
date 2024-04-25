@@ -9,6 +9,7 @@ const User = require("../models/user");
 const BalanceModel = require("../models/balance.model");
 const StatementModel = require("../models/statement.model");
 const cron = require("node-cron");
+const notificationModel = require("../models/notification.model");
 
 cron.schedule("20 13 * * *", () => {
   console.log("Match deactivate started.");
@@ -449,6 +450,11 @@ const updatePrediction = async (req, res) => {
       { $set: restData }
     );
     if (updateResponse) {
+      await notificationModel.create({
+        receiverId: "admin@gmail.com",
+        message: `${email} updated the match prediction for ${matchId}`,
+        sentDate: new Date(),
+      });
       return res.status(200).send({ message: "Updated" });
     } else {
       return res.status(409).send(false);
@@ -758,21 +764,21 @@ const getSummary = async (req, res) => {
         $unwind: "$user",
       },
       {
-        $project:{
-          _id:1,
-          matches:1,
+        $project: {
+          _id: 1,
+          matches: 1,
           firstName: "$user.firstName",
           lastName: "$user.lastName",
-        }
+        },
       },
       {
-        "$addFields": {
-          "matches_count": { "$size": "$matches" }
-        }
+        $addFields: {
+          matches_count: { $size: "$matches" },
+        },
       },
       {
-        "$sort": { "matches_count": -1 }
-      }
+        $sort: { matches_count: -1 },
+      },
     ]);
     if (users && users.length) {
       for (const user of users) {
@@ -787,21 +793,50 @@ const getSummary = async (req, res) => {
         };
         for (const prediction of user.matches) {
           const match = await Match.findOne({ id: prediction.matchId });
-          finalDocument.tossWinner += match.tossWinner === prediction.tossWinner ? 1 : 0
-          finalDocument.matchWinner += match.matchWinner === prediction.matchWinner ? 1 : 0
-          finalDocument.manOfTheMatch += match.manOfTheMatch === prediction.manOfTheMatch ? 1 : 0
-          finalDocument.mostCatches += match.mostCatches?.includes(prediction.mostCatches) ? 1 : 0
-          finalDocument.mostRuns += match.mostRuns?.includes(prediction.mostRuns) ? 1 : 0
-          finalDocument.mostWickets += match.mostWickets?.includes(prediction.mostWickets) ? 1 : 0
-          finalDocument.mostSixes += match.mostSixes?.includes(prediction.mostSixes) ? 1 : 0
-
+          finalDocument.tossWinner +=
+            match.tossWinner === prediction.tossWinner ? 1 : 0;
+          finalDocument.matchWinner +=
+            match.matchWinner === prediction.matchWinner ? 1 : 0;
+          finalDocument.manOfTheMatch +=
+            match.manOfTheMatch === prediction.manOfTheMatch ? 1 : 0;
+          finalDocument.mostCatches += match.mostCatches?.includes(
+            prediction.mostCatches
+          )
+            ? 1
+            : 0;
+          finalDocument.mostRuns += match.mostRuns?.includes(
+            prediction.mostRuns
+          )
+            ? 1
+            : 0;
+          finalDocument.mostWickets += match.mostWickets?.includes(
+            prediction.mostWickets
+          )
+            ? 1
+            : 0;
+          finalDocument.mostSixes += match.mostSixes?.includes(
+            prediction.mostSixes
+          )
+            ? 1
+            : 0;
         }
-        user['summary'] = finalDocument
+        user["summary"] = finalDocument;
       }
-
     }
 
     return res.send({ data: users });
+  } catch (error) {
+    return res.status(500).send(error);
+  }
+};
+
+const getNotifications = async (req, res) => {
+  try {
+    const { email } = req.params;
+    const notifications = await notificationModel
+      .find({ receiverId: email })
+      .sort({ sentDate: -1 });
+    return res.status(200).send({ data: notifications });
   } catch (error) {
     return res.status(500).send(error);
   }
@@ -834,6 +869,7 @@ const mainController = {
   getMatchByMatchId,
   uploadPhoto,
   getSummary,
+  getNotifications,
 };
 
 module.exports = mainController;

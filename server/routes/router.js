@@ -127,6 +127,7 @@ router.get("/getAllUsers", mainController.getAllUsers);
 router.get("/getSeasonPointsTable", mainController.getSeasonPointsTable);
 router.get("/getMatchByMatchId/:matchId", mainController.getMatchByMatchId);
 router.get("/getSummary", mainController.getSummary);
+router.get("/getNotifications/:email", mainController.getNotifications);
 
 router.post(
   "/uploadPhoto/:email",
