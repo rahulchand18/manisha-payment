@@ -836,7 +836,8 @@ const getNotifications = async (req, res) => {
     const { email } = req.params;
     const notifications = await notificationModel
       .find({ receiverId: email })
-      .sort({ sentDate: -1 });
+      .sort({ sentDate: -1 })
+      .limit(10);
     return res.status(200).send({ data: notifications });
   } catch (error) {
     return res.status(500).send(error);
