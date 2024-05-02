@@ -9,6 +9,7 @@ import { MatchService } from 'src/app/core/services/match.service';
 })
 export class SeasonPointsTableComponent {
   table: any;
+  sortType = 'asc'
 
   constructor(
     private matchService: MatchService,
@@ -23,5 +24,20 @@ export class SeasonPointsTableComponent {
         this.table = res.data;
       },
     });
+  }
+
+  sortBy():void{
+    if(this.sortType === 'asc'){
+      this.table = this.table.sort((a:any,b:any)=> (a.total/a.matches)-(b.total/b.matches))
+      this.sortType = 'desc'
+    }
+    else if(this.sortType === 'desc'){
+      this.table = this.table.sort((a:any,b:any)=> (b.total/b.matches)-(a.total/a.matches))
+      this.sortType = 'def'
+    }
+   else if(this.sortType === 'def'){
+      this.table = this.table.sort((a:any,b:any)=> (b.total)-(a.total))
+      this.sortType = 'asc'
+    }
   }
 }
