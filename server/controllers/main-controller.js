@@ -344,7 +344,7 @@ function balanceBreakdown(total) {
       returnObj = { first: 30, second: -10, third: -10 };
       break;
     case 50:
-      returnObj = { first: 30, second: 0, third: -0 };
+      returnObj = { first: 30, second: 0, third: -10 };
       break;
     case 60:
       returnObj = { first: 40, second: 0, third: -10 };
@@ -835,7 +835,7 @@ const getNotifications = async (req, res) => {
   try {
     const { email } = req.params;
     const notifications = await notificationModel
-      .find({$or:[{receiverId: email},{receiverId:'everyone'}]  })
+      .find({ $or: [{ receiverId: email }, { receiverId: "everyone" }] })
       .sort({ sentDate: -1 })
       .limit(10);
     return res.status(200).send({ data: notifications });
