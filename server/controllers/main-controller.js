@@ -312,7 +312,7 @@ async function calculateBalance(matchId) {
     total: -1,
     createdAt: 1,
   });
-  const totalBalance = matchWinner.length * 10;
+  const totalBalance = matchWinner.length * 25;
   const { first, second, third } = balanceBreakdown(totalBalance);
   for (const player of matchWinner) {
     if (player.email === matchWinner[0].email) {
@@ -332,7 +332,7 @@ async function calculateBalance(matchId) {
         matchId
       );
     } else {
-      await updateBalanceByUser(player.email, 10, "deducted", matchId);
+      await updateBalanceByUser(player.email, 25, "deducted", matchId);
     }
   }
 }
@@ -340,46 +340,46 @@ async function calculateBalance(matchId) {
 function balanceBreakdown(total) {
   let returnObj = {};
   switch (total) {
-    case 40:
-      returnObj = { first: 30, second: -10, third: -10 };
-      break;
-    case 50:
-      returnObj = { first: 30, second: 0, third: -10 };
-      break;
-    case 60:
-      returnObj = { first: 40, second: 0, third: -10 };
-      break;
-
-    case 70:
-      returnObj = { first: 40, second: 10, third: -10 };
-      break;
-
-    case 80:
-      returnObj = { first: 40, second: 10, third: 0 };
-      break;
-
-    case 90:
-      returnObj = { first: 50, second: 10, third: 0 };
-      break;
-
     case 100:
-      returnObj = { first: 50, second: 20, third: 0 };
+      returnObj = { first: 75, second: -25, third: -25 };
+      break;
+    case 125:
+      returnObj = { first: 75, second: 0, third: -25 };
+      break;
+    case 150:
+      returnObj = { first: 100, second: 0, third: -25 };
       break;
 
-    case 110:
-      returnObj = { first: 60, second: 20, third: 0 };
+    case 175:
+      returnObj = { first: 100, second: 25, third: -25 };
       break;
 
-    case 120:
-      returnObj = { first: 70, second: 20, third: 0 };
+    case 200:
+      returnObj = { first: 100, second: 25, third: 0 };
       break;
 
-    case 130:
-      returnObj = { first: 70, second: 30, third: 0 };
+    case 225:
+      returnObj = { first: 125, second: 25, third: 0 };
       break;
 
-    case 140:
-      returnObj = { first: 80, second: 30, third: 0 };
+    case 250:
+      returnObj = { first: 125, second: 50, third: 0 };
+      break;
+
+    case 275:
+      returnObj = { first: 150, second: 50, third: 0 };
+      break;
+
+    case 300:
+      returnObj = { first: 175, second: 50, third: 0 };
+      break;
+
+    case 325:
+      returnObj = { first: 175, second: 75, third: 0 };
+      break;
+
+    case 350:
+      returnObj = { first: 200, second: 75, third: 0 };
       break;
   }
   return returnObj;
