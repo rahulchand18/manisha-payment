@@ -35,7 +35,9 @@ export class TournamentComponent {
       next: (res) => {
         this.allSeries = res.data;
         this.loading = false;
-      },
+      },error:()=>{
+        this.loading = false;
+      }
     });
   }
 
