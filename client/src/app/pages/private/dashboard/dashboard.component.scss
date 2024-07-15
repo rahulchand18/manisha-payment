@@ -28,3 +28,10 @@
 .gap-10 {
   gap: 20px;
 }
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}

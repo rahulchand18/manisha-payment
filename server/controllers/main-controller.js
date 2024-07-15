@@ -576,7 +576,18 @@ const getAllPredictions = async (req, res) => {
 const getBalanceById = async (req, res) => {
   try {
     const { email } = req.params;
-    const balance = await BalanceModel.findOne({ email });
+    const balance = await BalanceModel.aggregate([
+      {
+        $match: { email },
+      },
+      {
+        $group: {
+          _id: null,
+          balance: { $sum: "$balance" },
+        },
+      },
+    ]);
+    console.log(balance);
     const statements = await StatementModel.aggregate([
       {
         $match: { email },
@@ -586,7 +597,7 @@ const getBalanceById = async (req, res) => {
       },
     ]);
     const data = {
-      balance: balance?.balance ?? 0,
+      balance: balance[0]?.balance ?? 0,
       statements,
     };
     return res.status(200).send({ data });
@@ -595,28 +606,28 @@ const getBalanceById = async (req, res) => {
   }
 };
 
-async function updateBalanceByUser(email, balance, action, remarks) {
+async function updateBalanceByUser(email, balance, action, month, remarks) {
   if (balance) {
     balance = Math.abs(balance);
     let updateQuery = {};
     if (action === "added") {
-      updateQuery = { $inc: { balance: balance } };
-    } else {
-      updateQuery = { $inc: { balance: -balance } };
+      updateQuery = { $set: { balance } };
     }
     await StatementModel.create({
       email,
       balance,
       action,
+      month,
       remarks,
       date: new Date(),
     });
-    const existingBalance = await BalanceModel.findOne({ email });
+    const existingBalance = await BalanceModel.findOne({ email, month });
     if (existingBalance) {
       return await BalanceModel.updateOne({ email }, updateQuery);
     } else {
       return await BalanceModel.create({
         email,
+        month,
         balance,
       });
     }
@@ -625,11 +636,12 @@ async function updateBalanceByUser(email, balance, action, remarks) {
 
 const addDeductBalance = async (req, res) => {
   try {
-    const { email, balance, action, remarks } = req.body;
+    const { email, balance, action, month, remarks } = req.body;
     const updateResponse = await updateBalanceByUser(
       email,
       balance,
       action,
+      month,
       remarks
     );
 
@@ -639,25 +651,62 @@ const addDeductBalance = async (req, res) => {
       return res.status(409).json({ message: "Something went wrong" });
     }
   } catch (error) {
+    console.log(error);
     return res.status(500).send(error);
   }
 };
 
 const getAllUsers = async (req, res) => {
   try {
-    const users = await User.find();
+    const balances = await User.aggregate([
+      {
+        $lookup: {
+          from: "balances",
+          localField: "email",
+          foreignField: "email",
+          as: "balances",
+        },
+      },
+      {
+        $unwind: {
+          path: "$balances",
+          preserveNullAndEmptyArrays: true,
+        },
+      },
+      {
+        $group: {
+          _id: "$email",
+          totalBalance: { $sum: "$balances.balance" },
+          user: { $first: "$$ROOT" },
+          balances: {
+            $push: {
+              month: "$balances.month",
+              balance: "$balances.balance",
+            },
+          },
+        },
+      },
+      {
+        $sort: { "user.firstName": 1 },
+      },
+    ]);
+    console.log(balances);
     const data = [];
-    for (const user of users) {
-      let balance = await BalanceModel.findOne({ email: user.email });
-
-      data.push({
-        fullName: user.firstName + "  " + user.lastName,
-        balance: balance ? balance.balance : 0,
-        email: user.email,
+    for (const balance of balances) {
+      const obj = {
+        fullName: balance.user.firstName + "  " + balance.user.lastName,
+        totalBalance: balance ? balance.totalBalance : 0,
+        email: balance.user.email,
+        profile: balance.user.img,
+      };
+      balance.balances.forEach((blc) => {
+        obj[blc.month] = blc.balance;
       });
+      data.push(obj);
     }
     return res.status(200).send({ data });
   } catch (error) {
+    console.log(error);
     return res.status(500).send(error);
   }
 };

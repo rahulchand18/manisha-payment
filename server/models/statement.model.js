@@ -18,6 +18,9 @@ const StatementSchema = new Schema(
     date: {
       type: Date,
     },
+    month: {
+      type: String,
+    },
     remarks: {
       type: String,
       default: "admin",

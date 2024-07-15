@@ -12,6 +12,9 @@ const BalanceSchema = new Schema(
     balance: {
       type: Number,
     },
+    month: {
+      type: String,
+    },
   },
   {
     versionKey: false,

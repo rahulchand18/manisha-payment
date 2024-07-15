@@ -9,7 +9,7 @@
     top: 20%;
     z-index: 1;
   }
-  background-image: url('../../../../assets/images/ipl.jpg');
+  background-image: url("../../../../assets/images/bg.jpg");
   background-size: cover;
 }
 
@@ -38,6 +38,6 @@ mat-form-field {
 .loader {
   border: 2px solid black;
 }
-.border-radius{
-  border-radius: 15px !important
+.border-radius {
+  border-radius: 15px !important;
 }

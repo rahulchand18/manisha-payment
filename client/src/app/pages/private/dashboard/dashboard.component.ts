@@ -5,6 +5,7 @@ import { MatchService } from 'src/app/core/services/match.service';
 import { TournamentFormComponent } from './tournament-form/tournament-form.component';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
+import { MONTHS } from 'src/app/core/constants';
 
 @Component({
   selector: 'app-dashboard',
@@ -23,10 +24,11 @@ export class DashboardComponent implements OnInit {
   allUsers: any;
   statements: any;
   amount = 0;
+  monthArray = MONTHS;
   notifications: any = [];
 
   constructor(
-    private authService: AuthService,
+    public authService: AuthService,
     private matchService: MatchService,
     private dialog: MatDialog,
     private snackbar: MatSnackBar,
@@ -35,8 +37,6 @@ export class DashboardComponent implements OnInit {
     this.currentUser = authService.getUserData();
   }
   ngOnInit(): void {
-    this.getAllSeries();
-    this.getAllTournaments();
     this.getBalanceById();
     this.getAllUsers();
     this.getNotifications();
@@ -134,13 +134,14 @@ export class DashboardComponent implements OnInit {
       });
   }
 
-  updateBalance(balance: number, email: string, action: string) {
+  updateBalance(balance: number, email: string, month: string, action: string) {
     this.matchService
       .addDeductBalance({
         email,
         balance,
+        month,
         action,
-        remarks: 'admin',
+        remarks: this.currentUser.fullName,
       })
       .subscribe((res) => {
         this.getAllUsers();

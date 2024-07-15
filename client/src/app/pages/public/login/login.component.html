@@ -2,7 +2,7 @@
   <mat-card class="example-card p-4 border-radius">
     <mat-card-header>
       <mat-card-title>
-        <img src="../../../../assets/images/ipl-logo.png" height="50px" alt="">
+        <!-- <img src="../../../../assets/images/ipl-logo.png" height="50px" alt=""> -->
       </mat-card-title>
     </mat-card-header>
     <mat-card-content class="p-3">
@@ -11,7 +11,9 @@
           <div class="form-col">
             <mat-form-field appearance="outline" class="full-width">
               <input matInput placeholder="Email" type="text" formControlName="email" />
-              <mat-error *ngIf="submitted && loginForm.controls['email'].hasError('required') ">
+              <mat-error *ngIf="
+                  submitted && loginForm.controls['email'].hasError('required')
+                ">
                 Email is <strong>required</strong>
               </mat-error>
             </mat-form-field>
